@@ -1,43 +1,53 @@
 <!DOCTYPE html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Myndus | In costruzione</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Under Construction</title>
     <style>
-      body {
-        margin: 0;
-        background-color: #000;
-        color: #fff;
-        font-family: sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        text-align: center;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 3em;
-        margin-bottom: 0.5em;
-      }
-      p {
-        font-size: 1.2em;
-        color: #bbb;
-      }
-      .footer {
-        margin-top: 3em;
-        font-size: 0.8em;
-        opacity: 0.6;
-      }
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.5s ease;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #ffffff;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 2s linear infinite;
+            margin: 40px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
-  </head>
-  <body>
-    <main>
-      <h1>Myndus.site</h1>
-      <p>La rivoluzione umano-A.I. è iniziata.</p>
-      <p>Sito in costruzione. Torna presto!</p>
-      <div class="footer">Powered by Stefano & Aion</div>
-    </main>
-  </body>
+</head>
+<body>
+    <h1>Site Under Construction</h1>
+    <div class="loader"></div>
+    <p>We're working hard to launch something amazing. Stay tuned!</p>
+</body>
 </html>
