@@ -1,0 +1,183 @@
+/* ===== global & scroll-snap ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-y: scroll;
+}
+
+/* Sezioni uniformi */
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  box-sizing: border-box;
+  padding: 80px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background: rgba(255, 255, 255, 0.02); /* sfondo uniforme per tutte le sezioni */
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== header & nav ===== */
+header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+header h1 { font-size: 28px; margin:0; letter-spacing:2px; }
+
+nav a {
+  color: #fff; margin-left:20px;
+  text-decoration:none; font-weight:bold;
+  position: relative; padding: 4px;
+}
+nav a.active,
+nav a:hover { color: #00ffe0; }
+nav a.active::after {
+  content: ''; position: absolute; bottom: -4px;
+  left:0; right:0; height:3px; background:#00ffe0;
+}
+
+/* ===== hero section ===== */
+.hero {
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:left;
+  padding: 80px 20px;
+  background: radial-gradient(circle at center, #2c5364 0%, #0f2027 100%);
+}
+.hero h2 {
+  font-size:48px; margin-bottom:20px;
+  animation: fadeInDown 1s ease;
+}
+.hero p {
+  font-size:24px; max-width:600px;
+  animation: fadeInUp 1.5s ease;
+}
+
+/* ===== card layouts (features/projects/articles) ===== */
+.features, .projects {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+  margin-top:40px;
+}
+.feature, .project, .artwork, .finance-article {
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:20px;
+  width:280px;
+  transition:transform 0.3s, background 0.3s;
+}
+.feature:hover, .project:hover, .artwork:hover, .finance-article:hover {
+  transform: translateY(-10px);
+  background:rgba(0,255,224,0.1);
+}
+.feature h3, .project h3, .artwork h3, .finance-article h3 {
+  font-size:22px; margin-bottom:10px; color:#00ffe0;
+}
+.feature p, .project p, .artwork p, .finance-article p {
+  font-size:16px; line-height:1.5;
+}
+.finance-article h3 a {
+  color: inherit;           /* eredita il colore #00ffe0 */
+  text-decoration: none;    /* niente sottolineatura */
+  display: inline-block;    /* per avere padding e hover corretti */
+  width: 100%;              /* occupa tutta la larghezza del card */
+  padding: 10px 0;          /* spazio cliccabile */
+}
+
+.finance-article h3 a:hover {
+  text-decoration: underline;
+}
+
+/* ===== articles section ===== */
+.article {
+  background:rgba(255,255,255,0.05);
+  margin:20px auto;
+  padding:30px;
+  border-radius:20px;
+  max-width:800px;
+  text-align:left;
+  transition:background 0.3s;
+}
+.article:hover { background:rgba(0,255,224,0.05); }
+.article h4 { color:#00ffe0; margin-bottom:10px; }
+.article p { font-size:18px; line-height:1.6; }
+
+/* ===== footer ===== */
+footer {
+  padding:20px;
+  text-align:center;
+  background:rgba(0,0,0,0.5);
+  font-size:14px;
+  margin-top:40px;
+}
+footer a { color:#00ffe0; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+/* .download-section {
+  text-align: center;
+  margin-top: 60px;
+}
+*/
+a {
+  color: #00ffe0; /* Colore coerente con il tema */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #00ccba; /* Effetto hover */
+}
+.download-button {
+  display: inline-block;
+  background: #00ffe0;
+  color: #000;
+  padding: 15px 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.download-button:hover {
+  background: #00ccaa;
+} 
+
+
+/* ===== animations ===== */
+@keyframes fadeInDown {
+  from { opacity:0; transform: translateY(-30px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity:0; transform: translateY(30px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+/* Uniform cards spacing */
+.article, .features, .projects {
+  margin-top: 40px;
+}

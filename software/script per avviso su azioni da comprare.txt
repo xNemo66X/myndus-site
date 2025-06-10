@@ -1,0 +1,25 @@
+20:26:54	Notifica	Esecuzione avviata
+20:26:54	Informazioni	Lista completa degli asset: [{"name":"Tesla","symbol":"TSLA"},{"name":"Apple","symbol":"AAPL"},{"name":"Microsoft","symbol":"MSFT"},{"name":"Amazon","symbol":"AMZN"},{"name":"Nvidia","symbol":"NVDA"}]
+20:26:54	Informazioni	Analisi asset #1: { name: 'Tesla', symbol: 'TSLA' }
+20:26:54	Informazioni	Analisi asset #2: { name: 'Apple', symbol: 'AAPL' }
+20:26:54	Informazioni	Analisi asset #3: { name: 'Microsoft', symbol: 'MSFT' }
+20:26:54	Informazioni	Analisi asset #4: { name: 'Amazon', symbol: 'AMZN' }
+20:26:54	Informazioni	Analisi asset #5: { name: 'Nvidia', symbol: 'NVDA' }
+20:26:55	Informazioni	📊 Daily RSI Report
+
+📅 25/05/2025
+
+• Tesla (TSLA): $339.34
+  RSI: 75.42 → 🔴 VENDI (ipercomprato)
+
+• Apple (AAPL): $195.27
+  RSI: 45.11 → ⏳ HOLD (neutro)
+
+• Microsoft (MSFT): $450.18
+  RSI: 66.71 → ⏳ HOLD (neutro)
+
+• Amazon (AMZN): $200.99
+  RSI: 66.63 → ⏳ HOLD (neutro)
+
+• Nvidia (NVDA): $131.29
+  RSI: 78.08 → 🔴 VENDI (ipercomprato)

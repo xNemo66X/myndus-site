@@ -1,53 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Construction</title>
-    <style>
-        body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: #ffffff;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease;
-        }
-        p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            animation: fadeInUp 1.5s ease;
-        }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #ffffff;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            animation: spin 2s linear infinite;
-            margin: 40px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Myndus - Parliamo di futuro</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Site Under Construction</h1>
-    <div class="loader"></div>
-    <p>We're working hard to launch something amazing. Stay tuned!</p>
+
+  <!-- Header and Navigation -->
+  <header>
+    <h1>Myndus</h1>
+    <nav>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#vision" class="nav-link">Vision</a>
+      <a href="#software" class="nav-link">Software</a>
+      <a href="#digitalart" class="nav-link">Digital Art</a>
+      <a href="#finance" class="nav-link">Finance Column</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero section (Intro) -->
+  <section id="home" class="hero">
+    <h2>Myndus – Parliamo di futuro</h2>
+    <p>Tecnologia, società e nuove possibilità.</p>
+  </section>
+
+  <!-- About section with articles -->
+  <section id="about">
+    <h2>About Myndus</h2>
+    <p>At Myndus, we explore technology's human side—how it's born, how it shapes us, and how to harness it thoughtfully.</p>
+    <div class="articles"> <!-- Aggiungi questo wrapper -->
+      <div class="article"><h3>Innovation Beyond Limits</h3><p>...</p></div>
+      <div class="article"><h3>Innovation is our core</h3><p>...</p></div>
+    </div>
+  </section>
+
+  <!-- Vision with 3 features -->
+  <section id="vision">
+    <h2>Our Vision</h2>
+    <p>Shaping a world where technology, creativity, and humanity merge in perfect synergy.</p>
+    <div class="features">
+      <div class="feature"><h3>Boundless Creativity</h3><p>...</p></div>
+      <div class="feature"><h3>Smart Solutions</h3><p>...</p></div>
+      <div class="feature"><h3>Global Impact</h3><p>...</p></div>
+    </div>
+  </section>
+
+  <!-- Software section with 3 projects -->
+  <section id="software">
+    <h2>Software</h2>
+    <p>Discover our groundbreaking software solutions...</p>
+    <div class="projects">
+      <div class="project"><h3>MindOS</h3><p>...</p></div>
+      <div class="project"><h3>Neural Connect</h3><p>...</p></div>
+      <div class="project"><h3>Quantum Wallet</h3><p>...</p></div>
+    </div>
+  </section>
+
+  <!-- Digital art section -->
+  <section id="digitalart">
+    <h2>Digital Art</h2>
+    <p>Explore the intersection between creativity and technology...</p>
+    <div class="projects">
+      <div class="artwork"><h3>Echoes of Tomorrow</h3><p>...</p></div>
+      <div class="artwork"><h3>Neon Souls</h3><p>...</p></div>
+      <div class="artwork"><h3>Code Poetry</h3><p>...</p></div>
+    </div>
+  </section>
+
+  <!-- Finance column section -->
+  <section id="finance">
+    <h2>Finance Column</h2>
+    <p>Insights, analysis, and strategies...</p>
+    <p>⚠️ This section includes AI-generated insights. Informational use only. May contain inaccuracies.</p>
+    <div class="projects">
+      <div class="finance-article">
+        <h3><a href="defi.html">DeFi: A New Era</a></h3>
+        <p>A clear and practical overview of decentralized finance in 2025.</p>
+      </div>
+      <div class="finance-article">
+        <h3><a href="stock_investing_2025.html">Smart Investing 2025</a></h3>
+          <p>Navigate the stock market with data-driven strategies for 2025</p>
+        </div>
+      <div class="finance-article">
+        <h3><a href="crypto.html">Cryptocurrency Explained</a></h3>
+        <p>An overview of the main crypto trends and opportunities this year</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact and footer -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you!</p>
+    <footer>
+      <p>&copy; 2025 Myndus | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      <p class="note">This text was generated with AI Aion under human supervision. It may contain errors; please verify important information.</p>
+    </footer>
+  </section>
+
+ <!--  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => {
+        link.addEventListener('click', function () {
+          links.forEach(link => link.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.3 });
+      sections.forEach(section => observer.observe(section));
+    });
+  </script> -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const options = { threshold: 0.3 };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, options);
+  
+    sections.forEach(section => observer.observe(section));
+  </script>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section');
+  
+  // Gestione click sui link
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Previeni il comportamento default se necessario
+      // e.preventDefault();
+      
+      links.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Rimuovi la classe 'visible' da tutte le sezioni prima dello scroll
+      sections.forEach(section => {
+        section.classList.remove('visible');
+      });
+    });
+  });
+
+  // Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  sections.forEach(section => observer.observe(section));
+});
+</script>
 </body>
 </html>
