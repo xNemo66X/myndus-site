@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Myndus Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1> Myndus Courses</h1>
+    <p>Learn freely with open-source guides developed by the Myndus team.</p>
+  </header>
+
+  <section>
+    <h2>Available Downloads</h2>
+
+    <div class="course">
+      <h3> Python Programming – Beginner Guide</h3>
+      <p>Learn the basics of Python through real examples and simple steps.</p>
+      <a class="download-button" href="articles/Phyton.pdf" target="_blank">Download PDF</a>
+    </div>
+
+    <div class="course">
+      <h3> OpenManus – Organize Your Knowledge</h3>
+      <p>Build your second brain with markdown, tags, and open tools.</p>
+      <a class="download-button" href="articles/OpenManus.pdf" target="_blank">Download PDF</a>
+    </div>
+
+    <div class="course">
+      <h3> Cybersecurity & Digital Self-Defense</h3>
+      <p>Coming soon: a complete guide to protect your devices and identity.</p>
+      <span class="coming-soon">Coming soon</span>
+    </div>
+  </section>
+  <script>
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>
+
