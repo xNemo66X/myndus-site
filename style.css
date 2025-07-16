@@ -166,8 +166,24 @@ a:hover {
 .download-button:hover {
   background: #00ccaa;
 } 
+.course {
+  background-color: #1a1a1a;
+  border: 1px solid #00ffe0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px #00ffe088;
+}
 
-
+.coming-soon {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #555;
+  color: #ccc;
+  font-style: italic;
+  border-radius: 8px;
+}
 /* ===== animations ===== */
 @keyframes fadeInDown {
   from { opacity:0; transform: translateY(-30px); }
