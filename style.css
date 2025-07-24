@@ -175,6 +175,34 @@ a:hover {
   box-shadow: 0 0 10px #00ffe088;
 }
 
+.ethical-usage-box {
+  background: #111827;
+  border: 1px solid #6366f1;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px #4f46e5aa;
+  color: #e0e7ff;
+  font-family: 'Fredoka', sans-serif;
+  margin-top: 40px;
+  max-width: 800px;
+}
+.ethical-usage-box h3 {
+  color: #a78bfa;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.ethical-usage-box p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.ethical-usage-box a {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+.ethical-usage-box a:hover {
+  color: #22d3ee;
+}
+
 .coming-soon {
   display: inline-block;
   margin-top: 0.5rem;
