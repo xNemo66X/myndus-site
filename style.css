@@ -166,14 +166,6 @@ a:hover {
 .download-button:hover {
   background: #00ccaa;
 } 
-.course {
-  background-color: #1a1a1a;
-  border: 1px solid #00ffe0;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  box-shadow: 0 0 10px #00ffe088;
-}
 
 .ethical-usage-box {
   background: #111827;
@@ -203,6 +195,25 @@ a:hover {
   color: #22d3ee;
 }
 
+.bot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #00ffe055;
+  max-width: 500px;
+}
+
+.bot-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
 .coming-soon {
   display: inline-block;
   margin-top: 0.5rem;
@@ -211,6 +222,9 @@ a:hover {
   color: #ccc;
   font-style: italic;
   border-radius: 8px;
+}
+.special-title {
+  color: white;
 }
 /* ===== animations ===== */
 @keyframes fadeInDown {
