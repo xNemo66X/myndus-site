@@ -40,6 +40,7 @@ header {
   align-items: center;
   background: rgba(0,0,0,0.4);
   position: sticky;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   top: 0;
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -113,6 +114,40 @@ nav a.active::after {
 
 .finance-article h3 a:hover {
   text-decoration: underline;
+}
+
+/* Stile per pagine secondarie senza bande colorate */
+/* style.css */
+body.uniform-bg {
+  background: #0f2027;
+  background-attachment: fixed;
+  color: #fff;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Mantieni questi stili per la formattazione del contenuto */
+.article-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+body.uniform-bg h1,
+body.uniform-bg h2 {
+  color: #00ffe0;
+}
+
+body.uniform-bg table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+body.uniform-bg th,
+body.uniform-bg td {
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 /* ===== articles section ===== */
@@ -225,6 +260,77 @@ a:hover {
 }
 .special-title {
   color: white;
+}
+/* pagine di digital art */
+.back-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.4); /* come l'header */
+  backdrop-filter: blur(10px);
+  font-family: 'Arial', sans-serif;
+  border-bottom: 1px solid rgba(255,255,255,0.1); /* bordino leggero */
+}
+
+.back-bar a {
+  color: #00ffe0;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.image-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+}
+.image-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: rgba(255,255,255,0.02);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 224, 0.1); 
+  width: 600px;
+  height: 200px; /* Altezza fissa per tutte le immagini */
+  /* flex-shrink: 0; /* Impedisce il ridimensionamento */
+  /* overflow: hidden; /* Nasconde eventuali parti in eccesso */
+ /* border-radius: 8px;
+  border: 1px solid rgba(0, 255, 224, 0.15); 
+  */
+}
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene le proporzioni coprendo l'area */
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 224, 0.15);
+  transition: transform 0.3s ease;
+}
+.image-item img:hover {
+  transform: scale(1.07);
+  z-index: 2;
+}
+.image-caption {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .image-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .image-item img {
+    width: 100%;
+  }
 }
 /* ===== animations ===== */
 @keyframes fadeInDown {
