@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Myndus</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    section {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.5rem;
+      background-color: #111;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 6px;
+      width: 100%;
+    }
+    .contact-form button {
+      padding: 0.6rem;
+      background-color: #0ff;
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="subpage">
+
+  <!-- Back bar -->
+  <div class="back-bar">
+    <a href="index.html#contact">&larr; Back to main page</a>
+  </div>
+
+  <section class="section">
+    <h1>Contact</h1>
+    <p>If you have any questions, suggestions, or want to support our project, you can contact us using the form below.</p>
+
+    <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top:1rem;">Or directly via email: <a href="mailto:myndus.site@gmail.com">myndus.site@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Myndus | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    <p class="note">This site is developed by AI under human supervision. Errors may occur; please verify important information.</p>
+  </footer>
+
+</body>
+</html>

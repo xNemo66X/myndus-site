@@ -332,6 +332,7 @@ a:hover {
     width: 100%;
   }
 }
+
 /* ===== animations ===== */
 @keyframes fadeInDown {
   from { opacity:0; transform: translateY(-30px); }
@@ -345,3 +346,21 @@ a:hover {
 .article, .features, .projects {
   margin-top: 40px;
 }
+/* ===== Subpages (Digital Art detail pages) ===== */
+body.subpage html, 
+body.subpage {
+  scroll-snap-type: none !important;
+}
+
+body.subpage section {
+  min-height: auto !important;
+  scroll-snap-align: none !important;
+  align-items: flex-start;
+}/* Subpages background */
+body.subpage {
+  background: #0f2027 !important;  /* colore uniforme */
+}
+ #contact {
+      min-height: 80vh; /* Riduci l'altezza per permettere di vedere il footer */
+      padding-bottom: 100px; /* Aggiungi spazio extra in fondo */
+    }
