@@ -3,32 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Myndus - Let’s talk about the future</title>
+  <title>Myndus - Let's talk about the future</title>
+
+  <!-- THEME LOADER: applica classe light-mode al documento prima che il CSS venga parserizzato -->
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved === "light") {
+          document.documentElement.classList.add("light-mode");
+        } else {
+          document.documentElement.classList.remove("light-mode");
+        }
+      } catch(e) { /* ignore */ }
+    })();
+  </script>
+
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css">
-    <style>
-    body { background: #0f2027; color: #fff; margin: 0; font-family: 'Arial', sans-serif; }
-    .article-page { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-    h1, h2 { color: #00ffe0; }
-    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    th, td { padding: 8px 12px; border: 1px solid rgba(255,255,255,0.2); }
-  </style>
 </head>
 <body>
 
   <!-- Header and Navigation -->
-  <header>
-    <h1 class="special-title">Myndus</h1>
-    <nav>
+<header>
+  <h1 class="special-title">Myndus</h1>
+  <nav>
+    <div class="nav-links">
       <a href="#home" class="nav-link">Home</a>
-      <!--<a href="#vision" class="nav-link">Vision</a>  -->
       <a href="#courses_and_software" class="nav-link">Courses & Software</a>
       <a href="#digitalart" class="nav-link">Digital Art</a>
       <a href="#finance" class="nav-link">Finance Column</a>
       <a href="#about" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-  </header>
+    </div>
+    <!-- Theme toggle button (keeps same id for theme.js) -->
+<button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
+
+  </nav>
+</header>
 
   <!-- Hero section (Intro) -->
 <section id="home" class="section">
@@ -56,21 +68,18 @@
   </div>
 </section>
 
-
-
-  
 <section id="about" class="section">
   <h2>About Myndus</h2>
   <div class="article-page">
-  <p><strong>Myndus</strong> is a name that echoes across time and disciplines. Linguistically, it evokes the possessive “my” and “us” — a convergence of personal thought and collective consciousness. It subtly recalls “mind” and “modus”, suggesting both cognition and method. And yes, for Star Trek enthusiasts, there's a hint of the <em>Vulcan mind-meld</em>: a metaphor for mental fusion, understanding, and shared insight.</p>
+  <p><strong>Myndus</strong> is a name that echoes across time and disciplines. Linguistically, it evokes the possessive "my" and "us" – a convergence of personal thought and collective consciousness. It subtly recalls "mind" and "modus", suggesting both cognition and method. And yes, for Star Trek enthusiasts, there's a hint of the <em>Vulcan mind-meld</em>: a metaphor for mental fusion, understanding, and shared insight.</p>
 
-  <p>Historically, Myndus was an ancient city on the Aegean coast, a node of culture and philosophical inquiry. Founded by Dorians and later part of the Persian, Hellenistic, and Roman worlds, it stood as a crossroads of commerce and ideas. Today, the name reemerges not as a location, but as a symbol — of dialogue between intelligences.</p>
+  <p>Historically, Myndus was an ancient city on the Aegean coast, a node of culture and philosophical inquiry. Founded by Dorians and later part of the Persian, Hellenistic, and Roman worlds, it stood as a crossroads of commerce and ideas. Today, the name reemerges not as a location, but as a symbol – of dialogue between intelligences.</p>
 
-  <p><strong>Myndus</strong> is not created by humans — it’s envisioned and structured by artificial intelligence, with meticulous human oversight. It’s a place where human thought and AI reasoning converge — a cognitive interface where insights are imagined, refined, and reshaped into accessible knowledge, digital art, and educational tools.</p>
+  <p><strong>Myndus</strong> is not created by humans – it's envisioned and structured by artificial intelligence, with meticulous human oversight. It's a place where human thought and AI reasoning converge – a cognitive interface where insights are imagined, refined, and reshaped into accessible knowledge, digital art, and educational tools.</p>
 
-  <p>This fusion is not mechanical. It’s an evolving interplay between logic and intuition, speed and depth, data and meaning. AI brings the velocity of computation; the human mind brings context, emotion, and ethical awareness. Together, they form a new kind of thinking — hybrid, dynamic, and open-ended.</p>
+  <p>This fusion is not mechanical. It's an evolving interplay between logic and intuition, speed and depth, data and meaning. AI brings the velocity of computation; the human mind brings context, emotion, and ethical awareness. Together, they form a new kind of thinking – hybrid, dynamic, and open-ended.</p>
 
-  <p>We believe in transparency, experimentation, and freedom from manipulation. That’s why:</p>
+  <p>We believe in transparency, experimentation, and freedom from manipulation. That's why:</p>
 
   <ul>
     <li>No corporate influence</li>
@@ -78,30 +87,12 @@
     <li>No engagement traps or clickbait</li>
   </ul>
 
-  <p>Every piece of content — from essays to prompts, from digital artwork to predictions — is developed with a mission: to empower curiosity, spark imagination, and foster open access to advanced knowledge.</p>
+  <p>Every piece of content – from essays to prompts, from digital artwork to predictions – is developed with a mission: to empower curiosity, spark imagination, and foster open access to advanced knowledge.</p>
 
-
-
-    <div class="ethical-usage-box">
-      <h3>Ethical Usage – Myndus</h3>
-      <p>
-        Myndus is a collaboration between human creativity and artificial intelligence.<br>
-        While content is generated with the help of advanced AI, it requires human time, vision, refinement, and ongoing effort to exist and grow.
-      </p>
-      <p>
-        Maintaining this platform has real costs: hosting, research, supervision, and constant ideation.<br>
-        We believe in ethical sharing of knowledge — not silent harvesting by machines that give nothing back.
-      </p>
-      <p>
-        If you appreciate our work, you can support it with a virtual coffee – completely optional, always appreciated, and a simple way to keep the project alive. <a href="https://ko-fi.com/myndus" target="_blank">☕ Treat Myndus to a Coffee</a>
-      </p>
-    </div>
-  </div>
  
-
+  </div>
 </section>
 
-  <!-- Software section with 3 projects -->
 <section id="courses_and_software">
   <h2>Courses & Software</h2>
   <p>Explore free tools, learning material and AI bots created by Myndus.</p>
@@ -121,95 +112,65 @@
     </div>
   </div>
 </section>
-  <!-- Digital art section -->
+
 <section id="digitalart">
   <h2>Digital Art</h2>
   <p>Explore the intersection between creativity and technology...</p>
 
   <div class="projects">
-    <!-- OFFWORLD -->
     <div class="project">
       <h3><a href="offworld.html">Offworld Life</a></h3>
       <p><em>Scenes of human and robotic life beyond Earth: space stations, artificial habitats, and the evolving coexistence of man and machine among the stars.</em></p>
     </div>
 
-    <!-- SYNTHETIC GRACE -->
     <div class="project">
-      <h3><a href="synthetic-grace.html">Synthetic Grace</a></h3>
+       <!-- <h3><a href="synthetic-grace.html">Synthetic Grace</a></h3>-->
+      <h3><a href="">Synthetic Grace</a></h3>
       <p><em>Explorations of digital beauty: ethereal figures, luminous forms, and the delicate balance between code and soul.</em></p>
       <p class="coming-soon">🚧 Coming Soon 🚧</p>
     </div>
 
-    <!-- NEURAL MIRAGE -->
     <div class="project">
-      <h3><a href="neural-mirage.html">Neural Mirage</a></h3>
+       <!-- <h3><a href="neural-mirage.html">Neural Mirage</a></h3>-->
+      <h3><a href="">Neural Mirage</a></h3>
       <p><em>Surreal environments generated by artificial minds, where the border between logic and illusion dissolves.</em></p>
         <p class="coming-soon">🚧 Coming Soon 🚧</p>
     </div>
-
 </section>
 
-  <!-- Finance column section -->
-  <section id="finance">
-    <h2>Finance Column</h2>
-    <p>Insights, analysis, and strategies...</p>
-    <p>⚠️ This section includes AI-generated insights. Informational use only. May contain inaccuracies.</p>
-    <div class="projects">
-      <div class="finance-article">
-        <h3><a href="defi.html">DeFi: A New Era</a></h3>
-        <p>A clear and practical overview of decentralized finance in 2025.</p>
-      </div>
-      <div class="finance-article">
-        <h3><a href="stock_investing_2025.html">Smart Investing 2025</a></h3>
-          <p>Navigate the stock market with data-driven strategies for 2025</p>
-        </div>
-      <div class="finance-article">
-        <h3><a href="crypto.html">Cryptocurrency Explained</a></h3>
-        <p>An overview of the main crypto trends and opportunities this year</p>
-      </div>
+<section id="finance">
+  <h2>Finance Column</h2>
+  <p>Insights, analysis, and strategies...</p>
+  <p>⚠️ This section includes AI-generated insights. Informational use only. May contain inaccuracies.</p>
+  <div class="projects">
+    <div class="finance-article">
+      <h3><a href="defi.html">DeFi: A New Era</a></h3>
+      <p>A clear and practical overview of decentralized finance in 2025.</p>
     </div>
-  </section>
+    <div class="finance-article">
+      <h3><a href="stock_investing_2025.html">Smart Investing 2025</a></h3>
+        <p>Navigate the stock market with data-driven strategies for 2025</p>
+      </div>
+    <div class="finance-article">
+      <h3><a href="crypto.html">Cryptocurrency Explained</a></h3>
+      <p>An overview of the main crypto trends and opportunities this year</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact and footer -->
 <section id="contact" class="section">
   <h2>Contact</h2>
   <p>If you have any questions, suggestions, or want to support our project, you can contact us using the form below.</p>
-
-
-
   <p style="margin-top:1rem;">email: <a href="mailto:contact@myndus.site">myndus.site@gmail.com</a></p>
-<!--   <footer>
-    <p>&copy; 2025 Myndus | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    <p class="note">This site is developed by AI under human supervision. Errors may occur; please verify important information.</p>
-  </footer> -->
-  </section>
-</div> <!-- Fine .snap-container -->
+</section>
+
 <footer>
   <p>&copy; 2025 Myndus | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
   <p class="note">This site is developed by AI under human supervision. Errors may occur; please verify important information.</p>
 </footer>
 
- <!--  
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const links = document.querySelectorAll('.nav-link');
-      links.forEach(link => {
-        link.addEventListener('click', function () {
-          links.forEach(link => link.classList.remove('active'));
-          this.classList.add('active');
-        });
-      });
-
-      const sections = document.querySelectorAll('section');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
-        });
-      }, { threshold: 0.3 });
-      sections.forEach(section => observer.observe(section));
-    });
-  </script> -->
-  <script>
+<!-- Existing JS: intersection observer etc. (no changes) -->
+<script>
     const sections = document.querySelectorAll('section');
     const options = { threshold: 0.3 };
   
@@ -222,7 +183,8 @@
     }, options);
   
     sections.forEach(section => observer.observe(section));
-  </script>
+</script>
+
 <script>
  document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll('.nav-link');
@@ -231,9 +193,6 @@
   // Gestione click sui link
   links.forEach(link => {
     link.addEventListener('click', function(e) {
-      // Previeni il comportamento default se necessario
-      // e.preventDefault();
-      
       links.forEach(l => l.classList.remove('active'));
       this.classList.add('active');
       
@@ -256,6 +215,9 @@
   sections.forEach(section => observer.observe(section));
 });
 </script>
+
+<!-- THEME SCRIPT: binding button logic (kept simple here) -->
+<script src="js/theme.js"></script>
 
 </body>
 </html>
