@@ -31,9 +31,13 @@
       padding: 40px 20px 20px !important;
       min-height: unset !important;
     }
-    section {
-    	scroll-snap-align: none !important;
-    	min-height: auto !important;
+/* Disattiva lo scroll-snap solo in questa pagina */
+  html, body {
+    scroll-snap-type: none !important;
+  }
+  section {
+    scroll-snap-align: none !important;
+    min-height: auto !important;
   }
   </style>
 </head>
