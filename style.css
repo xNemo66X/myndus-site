@@ -914,3 +914,98 @@ footer {
     white-space: nowrap;
   }
 }
+/* ===== HAMBURGER MENU ===== */
+
+/* Hamburger button (nascosto su desktop) */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--accent-default);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Animazione hamburger → X quando aperto */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menu mobile dropdown */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  header {
+    flex-wrap: nowrap;
+  }
+  
+  nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bg-header);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    border-bottom: 1px solid var(--border-color);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  
+  nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  
+  nav a {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 16px;
+    background: transparent;
+    border-radius: 0;
+  }
+  
+  nav a:last-child {
+    border-bottom: none;
+  }
+  
+  .theme-toggle {
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 15px;
+  }
+}
