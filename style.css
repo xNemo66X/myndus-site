@@ -783,7 +783,7 @@ footer {
     top: 70px;
     left: 0;
     right: 0;
-    background: var(--bg-header);
+    background: rgba(0, 0, 0, 0.75) !important; /* colore sfondo menù*/
     backdrop-filter: blur(20px);
     padding: 20px;
     transform: translateY(-100%);
