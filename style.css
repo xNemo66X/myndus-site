@@ -827,4 +827,8 @@ footer {
     margin: 20px 0 0 0;
     padding: 15px;
   }
+  /* Sfondo uniforme su mobile */
+  section {
+    background: var(--bg-uniform) !important;
+  }  
 }
