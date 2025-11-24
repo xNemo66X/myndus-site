@@ -783,7 +783,7 @@ footer {
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.75) !important; /* colore sfondo menù*/
+    background: var(--bg-header);
     backdrop-filter: blur(20px);
     padding: 20px;
     transform: translateY(-100%);
@@ -826,24 +826,5 @@ footer {
     width: 100%;
     margin: 20px 0 0 0;
     padding: 15px;
-  }
-  /* Sfondo uniforme su mobile */
-  section {
-    background: var(--bg-uniform) !important;
-  }  
-  /* === FIX: menu mobile visibility in light mode === */
-  html.light-mode nav {
-    background: rgba(255, 255, 255, 0.95) !important; /* sfondo quasi bianco */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-    backdrop-filter: none; /* evita effetti strani su browser più vecchi */
-  }
-
-  html.light-mode nav a {
-    color: #111 !important; /* testo nero leggibile */
-    text-shadow: none !important;
-  }
-
-  html.light-mode nav a:hover {
-    color: var(--accent-default) !important;
   }
 }
