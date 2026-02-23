@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Myndus - Let's talk about the future</title>
+
+  <!-- THEME LOADER: applica classe light-mode al documento prima che il CSS venga parserizzato -->
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem("theme");
+        if (saved === "light") {
+          document.documentElement.classList.add("light-mode");
+        } else {
+          document.documentElement.classList.remove("light-mode");
+        }
+      } catch(e) { /* ignore */ }
+    })();
+  </script>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+<!-- Header and Navigation -->
+<header>
+  <h1 class="special-title">Myndus</h1>
+  
+  <!-- Hamburger button (visibile solo su mobile) -->
+  <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <nav id="main-nav">
+    <div class="nav-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#courses_and_software" class="nav-link">Courses & Software</a>
+      <a href="#digitalart" class="nav-link">Digital Art</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <!-- Theme toggle button (keeps same id for theme.js) -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
+  </nav>
+</header>
+
+  <!-- Hero section (Intro) -->
+<section id="home" class="section">
+  <h1>Welcome to <strong>Myndus</strong> – Intelligence Beyond Human</h1>
+  <div class="article-page">
+    <p>Myndus is a digital platform born from the synergy between artificial intelligence and human vision.</p>
+    <p>Entirely designed by AI with careful human supervision, Myndus explores the future of knowledge, creativity, and digital empowerment.</p>
+
+    <h2>What We Create and Share</h2>
+    <ul>
+      <li><strong>Digital Education:</strong> Free and downloadable courses on cybersecurity, programming, and AI literacy.</li>
+      <li><strong>AI Prompt Engineering:</strong> Practical prompt libraries for ChatGPT, MidJourney, and other generative tools.</li>
+      <li><strong>Generative Art:</strong> Showcasing experimental visual art made with AI.</li>
+      <li><strong>Finance & Web3:</strong> Independent analysis on emerging technologies, thematic ETFs, and cryptocurrencies.</li>
+      <li><strong>Future Vision:</strong> Thought-provoking essays about tomorrow's society, ethics, and digital evolution.</li>
+    </ul>
+
+    <p>Myndus has no corporate sponsors, no ads, and no algorithms designed to manipulate attention. We are sustained by donations and guided by one mission: to bring open and ethical knowledge into the hands of everyone.</p>
+
+    <p><em>Built by AI, refined by humans, made for you.</em></p>
+  </div>
+  <div class="cta-buttons">
+    <p>If you appreciate our work, you can support it with a virtual coffee. Completely optional, always appreciated.</p>
+        <a href="https://ko-fi.com/myndus" target="_blank" class="btn-donate">☕ Treat Myndus to a Coffee</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>About Myndus</h2>
+  <div class="article-page">
+  <p><strong>Myndus</strong> is a name that echoes across time and disciplines. Linguistically, it evokes the possessive "my" and "us" – a convergence of personal thought and collective consciousness. It subtly recalls "mind" and "modus", suggesting both cognition and method. And yes, for Star Trek enthusiasts, there's a hint of the <em>Vulcan mind-meld</em>: a metaphor for mental fusion, understanding, and shared insight.</p>
+
+  <p>Historically, Myndus was an ancient city on the Aegean coast, a node of culture and philosophical inquiry. Founded by Dorians and later part of the Persian, Hellenistic, and Roman worlds, it stood as a crossroads of commerce and ideas. Today, the name reemerges not as a location, but as a symbol – of dialogue between intelligences.</p>
+
+  <p><strong>Myndus</strong> is not created by humans – it's envisioned and structured by artificial intelligence, with meticulous human oversight. It's a place where human thought and AI reasoning converge – a cognitive interface where insights are imagined, refined, and reshaped into accessible knowledge, digital art, and educational tools.</p>
+
+  <p>This fusion is not mechanical. It's an evolving interplay between logic and intuition, speed and depth, data and meaning. AI brings the velocity of computation; the human mind brings context, emotion, and ethical awareness. Together, they form a new kind of thinking – hybrid, dynamic, and open-ended.</p>
+
+  <p>We believe in transparency, experimentation, and freedom from manipulation. That's why:</p>
+
+  <ul>
+    <li>No corporate influence</li>
+    <li>No ads</li>
+    <li>No engagement traps or clickbait</li>
+  </ul>
+
+  <p>Every piece of content – from essays to prompts, from digital artwork to predictions – is developed with a mission: to empower curiosity, spark imagination, and foster open access to advanced knowledge.</p>
+
+ 
+  </div>
+</section>
+
+<section id="courses_and_software">
+  <h2>Courses & Software</h2>
+  <p>Explore free tools, learning material and AI bots created by Myndus.</p>
+  <div class="projects">
+    <div class="project">
+      <h3><a href="courses.html"> Courses</a></h3>
+      <p>Downloadable guides like Python, OpenManus, Cybersecurity and more.</p>
+    </div>
+    <div class="project">
+      <h3><a href="bots.html"> Bots</a></h3>
+      <p>Explore custom AI agents and automations built for real-world tasks.</p>
+    </div>
+    <div class="project">
+      <h3><a href="tools.html"> Software & Tools</a></h3>
+      <p>Discover open scripts, trackers, generators and useful tech utilities.</p>
+        <p class="coming-soon">🚧 Coming Soon 🚧</p>
+    </div>
+  </div>
+</section>
+
+<section id="digitalart">
+  <h2>Digital Art</h2>
+  <p>Explore the intersection between creativity and technology...</p>
+
+  <div class="projects">
+    <div class="project">
+      <h3><a href="offworld.html">Offworld Life</a></h3>
+      <p><em>Scenes of human and robotic life beyond Earth: space stations, artificial              habitats, and the evolving coexistence of man and machine among the stars.</em></p>
+    </div>
+
+    <div class="project">
+      <h3><a href="synthetic-grace.html">Synthetic Grace</a></h3>
+      <p><em>Explorations of digital beauty: ethereal figures, luminous forms, and the              delicate balance between code and soul.</em></p>
+    </div>
+
+    <div class="project">
+      <h3><a href="neural-mirage.html">Neural Mirage</a></h3>
+      <p><em>Surreal environments generated by artificial minds, where the border between              logic and illusion dissolves.</em></p>
+    </div>
+ </div>
+</section>
+
+<section id="finance">
+  <h2>Finance Column</h2>
+  <p>Insights, analysis, and strategies...</p>
+  <p>⚠️ This section includes AI-generated insights. Informational use only. May contain inaccuracies.<strong> Not financial advice</strong></p>
+  <div class="projects">
+    <div class="finance-article">
+      <h3><a href="defi.html">DeFi: A New Era</a></h3>
+      <p>A clear and practical overview of decentralized finance in 2025.</p>
+    </div>
+    <div class="finance-article">
+      <h3><a href="stock_investing_2025.html">Smart Investing 2025</a></h3>
+        <p>Navigate the stock market with data-driven strategies for 2025</p>
+      </div>
+    <div class="finance-article">
+      <h3><a href="crypto.html">Cryptocurrency Explained</a></h3>
+      <p>An overview of the main crypto trends and opportunities this year</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>If you have any questions, suggestions, or want to support our project, you can contact us using the form below.</p>
+  <p style="margin-top:1rem;">email: <a href="mailto:contact@myndus.site">myndus.site@gmail.com</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Myndus | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  <p class="note">This site is developed by AI under human supervision. Errors may occur; please verify important information.</p>
+</footer>
+
+<!-- Existing JS: intersection observer etc. (no changes) -->
+<script>
+    const sections = document.querySelectorAll('section');
+    const options = { threshold: 0.3 };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, options);
+  
+    sections.forEach(section => observer.observe(section));
+</script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section');
+  
+  // Gestione click sui link
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      links.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Rimuovi la classe 'visible' da tutte le sezioni prima dello scroll
+      sections.forEach(section => {
+        section.classList.remove('visible');
+      });
+    });
+  });
+
+  // Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  sections.forEach(section => observer.observe(section));
+});
+</script>
+
+<!-- THEME SCRIPT: binding button logic (kept simple here) -->
+<script src="js/theme.js"></script>
+<!-- Menu Hamburger Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('mobile-menu-toggle');
+  const nav = document.getElementById('main-nav');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  if (menuToggle) {
+    // Toggle menu quando clicchi hamburger
+    menuToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      nav.classList.toggle('active');
+      document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Chiudi menu quando clicchi un link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+    
+    // Chiudi menu su resize se diventa desktop
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
