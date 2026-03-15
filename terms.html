@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Myndus</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Myndus</title>
+  <script>(function(){try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    section {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  </style>
 </head>
 <body class="subpage">
-
-  <!-- Back bar -->
   <div class="back-bar">
-    <a href="index.html">&larr; Back to Home</a>
+    <a href="index.html" data-i18n="nav.back-home">← Back to Home</a>
+    <div class="header-controls">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">IT</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
+    </div>
   </div>
   <section class="section">
-  <h2>Terms of Service</h2>
-  <p>By accessing <strong>Myndus</strong>, you agree to the following terms of use:</p>
-  <ol class="terms-list">
-    <li><strong>Educational & Artistic Purpose</strong> – All content is shared for inspiration, learning, and creative exploration. It is not intended as professional or financial advice.</li>
-    <li><strong>AI-Assisted Content</strong> – Articles, analyses, and artworks are created with the support of artificial intelligence under human supervision. While we strive for accuracy, errors may occur. Always verify before relying on the information.</li>
-    <li><strong>Usage Rights</strong> – You are free to share our content with proper attribution. However, commercial use or redistribution without prior permission is prohibited.</li>
-    <li><strong>Responsibility</strong> – Myndus is not liable for decisions made based on our content, nor for third-party links or external resources.</li>
-    <li><strong>Donations</strong> – Contributions are voluntary and non-refundable.</li>
-    <li><strong>Updates</strong> – These terms may evolve over time. Continued use of the site implies acceptance of the latest version.</li>
-  </ol>
-  <p>Thank you for being part of the Myndus journey.</p>
-</section>  
-  <footer>
-    <p>&copy; 2025 Myndus</a></p>
-    <p class="note">This site is developed by AI under human supervision. Errors may occur; please verify important information.</p>
-  </footer>
+    <div class="section-label" data-i18n="terms.label">// Legal</div>
+    <h2 class="section-title" data-i18n="terms.title">Terms of Service</h2>
+    <p class="section-description" data-i18n="terms.description">By accessing <strong>Myndus</strong>, you agree to the following terms:</p>
+    <ol class="terms-list">
+      <li data-i18n="terms.1"><strong>Educational & Artistic Purpose</strong></li>
+      <li data-i18n="terms.2"><strong>AI-Assisted Content</strong></li>
+      <li data-i18n="terms.3"><strong>Usage Rights</strong></li>
+      <li data-i18n="terms.4"><strong>Responsibility</strong></li>
+      <li data-i18n="terms.5"><strong>Donations</strong></li>
+      <li data-i18n="terms.6"><strong>Updates</strong></li>
+    </ol>
+    <p style="margin-top:24px;color:var(--text-secondary)" data-i18n="terms.thanks">Thank you for being part of the Myndus journey.</p>
+  </section>
+  <footer><span>&copy; 2025 Myndus</span><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><span class="footer-note" data-i18n="footer.note">Developed by AI under human supervision</span></footer>
+  <script src="js/theme.js"></script><script src="js/i18n.js"></script>
 </body>
 </html>

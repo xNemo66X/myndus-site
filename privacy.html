@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy - Myndus</title>
+  <script>(function(){try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    section {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  </style>
 </head>
 <body class="subpage">
-
-  <!-- Back bar -->
   <div class="back-bar">
-    <a href="index.html">&larr; Back to Home</a>
-  </div>
-
-  <section class="section">
-    <h2>Privacy Policy</h2>
-    <p>This notice explains how <strong>Myndus</strong> handles users’ personal data and information.</p>
-    <div>
-      <ol class="terms-list">
-        <li><strong>Data Collected</strong> – We do not collect personal data through forms or automatic tracking. Any information you provide voluntarily (e.g., via email) is used only to respond to your requests.</li>
-        <li><strong>Cookies</strong> – Currently, <u>no cookies</u> or profiling systems are used. In the future, we may add only technical or anonymous statistical cookies to improve usability. Profiling or marketing cookies will never be implemented.</li>
-        <li><strong>Data Sharing</strong> – We never share your data with third parties, unless required by law.</li>
-        <li><strong>User Rights</strong> – You may request information, modification, or deletion of your data at any time by contacting us via the <a href="index.html#contact">Contact</a> section.</li>
-        <li><strong>Updates</strong> – This Privacy Policy may change over time. Continued use of the site implies acceptance of the latest version.</li>
-      </ol>
+    <a href="index.html" data-i18n="nav.back-home">← Back to Home</a>
+    <div class="header-controls">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">IT</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
     </div>
+  </div>
+  <section class="section">
+    <div class="section-label" data-i18n="privacy.label">// Legal</div>
+    <h2 class="section-title" data-i18n="privacy.title">Privacy Policy</h2>
+    <p class="section-description" data-i18n="privacy.description">This notice explains how <strong>Myndus</strong> handles users' personal data.</p>
+    <ol class="terms-list">
+      <li data-i18n="privacy.1"><strong>Data Collected</strong> – We do not collect personal data.</li>
+      <li data-i18n="privacy.2"><strong>Cookies</strong> – No cookies or profiling systems are used.</li>
+      <li data-i18n="privacy.3"><strong>Data Sharing</strong> – We never share your data.</li>
+      <li data-i18n="privacy.4"><strong>User Rights</strong> – You may request deletion at any time.</li>
+      <li data-i18n="privacy.5"><strong>Updates</strong> – This policy may change over time.</li>
+    </ol>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Myndus </a></p>
-    <p class="note">This site is developed by AI under human supervision. Errors may occur; please verify important information.</p>
-  </footer>
-
+  <footer><span>&copy; 2025 Myndus</span><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><span class="footer-note" data-i18n="footer.note">Developed by AI under human supervision</span></footer>
+  <script src="js/theme.js"></script><script src="js/i18n.js"></script>
 </body>
 </html>

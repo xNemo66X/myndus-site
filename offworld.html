@@ -1,150 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Offworld Life - Myndus</title>
-  
-  <!-- Theme Loader -->
-  <script>
-    (function() {
-      try {
-        const saved = localStorage.getItem("theme");
-        if (saved === "light") {
-          document.documentElement.classList.add("light-mode");
-        } else {
-          document.documentElement.classList.remove("light-mode");
-        }
-      } catch(e) { /* ignore */ }
-    })();
-  </script>
-  
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    section {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-    
-    /* CORREZIONI PER SPAZIO ECCESSIVO */
-    section.offworld-description {
-      padding: 40px 20px 20px !important;
-      min-height: unset !important;
-    }
- /* Disattiva lo scroll-snap solo in questa pagina */
-  html, body {
-    scroll-snap-type: none !important;
-  }
-  section {
-    scroll-snap-align: none !important;
-    min-height: auto !important;
-  }
-  </style>
+  <script>(function(){try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="uniform-bg">
-  
-  <!-- =======================================
-       HEADER + NAVBAR (come neural-mirage)
-       ======================================= -->
+<body class="subpage">
   <header>
-    <h1 class="special-title"> Offworld Life</h1>
+    <h1 class="page-title">Offworld Life</h1>
     <nav>
-      <div class="nav-links">
-        <a href="index.html#digitalart" class="nav-link">Home</a>
+      <div class="nav-links"><a href="index.html#digitalart" class="nav-link" data-i18n="nav.back-art">← Back to Art</a></div>
+      <div class="header-controls">
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">IT</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
     </nav>
   </header>
-
-  <!-- =======================================
-       DESCRIPTION SECTION
-       ======================================= -->
-  <section id="description" class="offworld-description">
-    <h1></h1>
-    <p><em>Scenes of human and robotic life beyond Earth: space stations, artificial habitats, and the evolving coexistence of man and machine among the stars.</em></p>
+  <section class="section">
+    <div class="section-label" data-i18n="gallery.label">// Digital Art Collection</div>
+    <p class="section-description" data-i18n="offworld.description"><em>Scenes of human and robotic life beyond Earth.</em></p>
   </section>
-
-  <!-- =======================================
-       GALLERY SECTION
-       ======================================= -->
-  <section id="gallery" class="image-list">
-    <div class="image-item">
-      <img src="images/robot-1-800x600.jpg" alt="Neon Sentinel">
-      <div class="image-caption">
-       <strong>Neon Sentinel</strong> 
-       <p>A lone robot stands guard in a decaying alley, surrounded by neon lights and urban shadows.</p>
-       <a href="images/robot-1-800x600.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
-
-    <div class="image-item">
-      <img src="images/robot-2-640x480.jpg" alt="Little Wanderer">
-      <div class="image-caption">
-        <strong>Little Wanderer</strong> 
-       <p>A small repair unit navigates a docking bay of a satellite station. Its autonomy and gentle demeanor reflect the new generation of adaptive machines.</p>
-       <a href="images/robot-2-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
-    
-    <div class="image-item">
-      <img src="images/robot-3-640x480.jpg" alt="Rusty Soul">
-      <div class="image-caption">
-        <strong>Rusty Soul</strong> 
-        <p>Among gears and dreams, a tiny robot moves with the sweetness of a lost pup.</p>
-        <a href="images/robot-3-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>  
-    
-    <div class="image-item">
-      <img src="images/robot-5-640x480.jpg" alt="Mechanical Heart">
-      <div class="image-caption">
-        <strong>Mechanical Heart</strong> 
-        <p>Created to serve, forgotten by time—now it wanders through a broken world, driven not by programming, but by something resembling longing.</p>
-        <a href="images/robot-5-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
-    
-    <div class="image-item">
-      <img src="images/space girl-2-640x480.jpg" alt="Silent Orbit">
-      <div class="image-caption">
-        <strong>Silent Orbit</strong> 
-        <p>Deep within a space station, a solitary figure works, wrapped in the quiet hum of surrounding technology.</p>
-        <a href="images/space girl-2-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>   
-    
-    <div class="image-item">
-      <img src="images/space girl-3-640x480.jpg" alt="Fusion of Human and Machine">
-      <div class="image-caption">
-        <strong>Fusion of Human and Machine</strong> 
-        <p>In a world where metal has replaced flesh, she still carries a human gaze.</p>
-        <a href="images/space girl-3-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
+  <section class="image-list">
+    <div class="image-item"><img src="images/robot-1-800x600.jpg" alt="Neon Sentinel"><div class="image-caption"><strong data-i18n="offworld.1.title">Neon Sentinel</strong><p data-i18n="offworld.1.desc">A lone robot stands guard in a decaying alley.</p><a href="images/robot-1-800x600.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/robot-2-640x480.jpg" alt="Little Wanderer"><div class="image-caption"><strong data-i18n="offworld.2.title">Little Wanderer</strong><p data-i18n="offworld.2.desc">A small repair unit navigates a docking bay.</p><a href="images/robot-2-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/robot-3-640x480.jpg" alt="Rusty Soul"><div class="image-caption"><strong data-i18n="offworld.3.title">Rusty Soul</strong><p data-i18n="offworld.3.desc">Among gears and dreams, a tiny robot moves.</p><a href="images/robot-3-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/robot-5-640x480.jpg" alt="Mechanical Heart"><div class="image-caption"><strong data-i18n="offworld.4.title">Mechanical Heart</strong><p data-i18n="offworld.4.desc">Created to serve, forgotten by time.</p><a href="images/robot-5-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/space girl-2-640x480.jpg" alt="Silent Orbit"><div class="image-caption"><strong data-i18n="offworld.5.title">Silent Orbit</strong><p data-i18n="offworld.5.desc">Deep within a space station, a solitary figure works.</p><a href="images/space girl-2-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/space girl-3-640x480.jpg" alt="Fusion"><div class="image-caption"><strong data-i18n="offworld.6.title">Fusion of Human and Machine</strong><p data-i18n="offworld.6.desc">In a world where metal has replaced flesh.</p><a href="images/space girl-3-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
   </section>
-
-  <!-- =======================================
-       NOTE SECTION
-       ======================================= -->
-  <section class="note-hd content-box">
-    <p><em>Note: The images shown here are preview versions. High-resolution files are available upon request or via our Ko-fi page.</em></p>
-    <p style="margin-top: 15px;">
-      🔗 <a href="https://ko-fi.com/myndus" target="_blank">Support the project on Ko-fi</a>
-    </p>
-  </section>
-
-  <!-- =======================================
-       FOOTER
-       ======================================= -->
-  <footer>
-    <p>&copy; 2025 Myndus | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    <p class="note">This text was generated with AI Aion under human supervision. It may contain errors; please verify important information.</p>
-  </footer>
-
-  <!-- =======================================
-       THEME SCRIPT
-       ======================================= -->
-  <script src="js/theme.js"></script>
-  
+  <section class="note-hd content-box"><p data-i18n="gallery.note"><em>Note: Preview versions. High-res available on Ko-fi.</em></p><p style="margin-top:15px">🔗 <a href="https://ko-fi.com/myndus" target="_blank" data-i18n="gallery.kofi">Support the project on Ko-fi</a></p></section>
+  <footer><span>&copy; 2025 Myndus</span><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><span class="footer-note" data-i18n="footer.note">Developed by AI under human supervision</span></footer>
+  <script src="js/theme.js"></script><script src="js/i18n.js"></script>
 </body>
 </html>

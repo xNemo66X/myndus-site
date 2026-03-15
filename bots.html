@@ -1,50 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Myndus Bots</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Bots - Myndus</title>
+  <script>(function(){try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="subpage">
   <header>
-    <h1>🤖 Myndus Bots</h1>
-    <p>Discover smart AI agents designed for research, automation, and interaction.</p>
+    <h1 class="page-title">Myndus Bots</h1>
+    <nav>
+      <div class="nav-links"><a href="index.html#courses" class="nav-link" data-i18n="nav.back-home">← Back to Home</a></div>
+      <div class="header-controls">
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">IT</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
+      </div>
+    </nav>
   </header>
-
-  <section class="visible">
-    <h2>Featured Bots</h2>
-
-<div class="bot">
-  <img src="images/BotJacquesRousseau.png" alt="Rousseau Bot Icon" class="bot-icon">
-  <h4>Jacques Rousseau Bot</h4>
-  <p>
-    Explore philosophical reasoning, ethics, and Enlightenment debates with a virtual mind inspired by Jean-Jacques Rousseau.
-  </p>
-  <p>
-    <a href="https://poe.com/BotJacquesRousseau" target="_blank" rel="noopener noreferrer">
-      👉 Talk to Jacques Rousseau
-    </a>
-  </p>
-</div>
-
-    <div class="bot">
-       <img src="images/botmotivazionale.png" alt="Motivational Bot" class="bot-icon">
-      <h4>Motivational Bot</h4>
-      <p>
-        Receive uplifting and empowering messages to boost your motivation and focus throughout the day.
-      </p>
-      <p><a href="https://poe.com/BotMotivazionale" target="_blank" rel="noopener noreferrer">👉 Talk to Motivational Bot</a></p>
-    </div>
-
-    <div class="bot">
-       <img src="images/ExpertFinancial.png" alt="ExpertFinancial Bot" class="bot-icon">
-      <h4>ExpertFinancial Bot</h4>
-      <p>
-        Get practical, AI-powered investment advice on ETFs, stocks, and cryptocurrencies — analysis of trends, RSI, moving averages, and buy/hold/sell suggestions.
-      </p>
-  <p><a href="https://poe.com/ExpertFinancial" target="_blank" rel="noopener noreferrer">👉 Talk to ExpertFinancial</a></p>
-    </div>
+  <section class="section">
+    <div class="section-label" data-i18n="botspage.label">// AI Agents</div>
+    <h2 class="section-title" data-i18n="botspage.title">Featured Bots</h2>
+    <p class="section-description" data-i18n="botspage.description">Smart AI agents.</p>
+    <div class="bot"><img src="images/BotJacquesRousseau.png" alt="Rousseau Bot" class="bot-icon"><h3 data-i18n="botspage.rousseau.title">Jacques Rousseau Bot</h3><p data-i18n="botspage.rousseau.desc">Explore philosophical reasoning.</p><p><a href="https://poe.com/JacquesRousseauBOT" target="_blank" rel="noopener noreferrer" data-i18n="botspage.rousseau.link">→ Talk to Jacques Rousseau</a></p></div>
+    <div class="bot"><img src="images/botmotivazionale.png" alt="Motivational Bot" class="bot-icon"><h3 data-i18n="botspage.motivational.title">Motivational Bot</h3><p data-i18n="botspage.motivational.desc">Receive uplifting messages.</p><p><a href="https://poe.com/BotMotivazionale" target="_blank" rel="noopener noreferrer" data-i18n="botspage.motivational.link">→ Talk to Motivational Bot</a></p></div>
+    <div class="bot"><img src="images/ExpertFinancial.png" alt="ExpertFinancial Bot" class="bot-icon"><h3 data-i18n="botspage.financial.title">ExpertFinancial Bot</h3><p data-i18n="botspage.financial.desc">Get AI-powered investment advice.</p><p><a href="https://poe.com/ExpertFinancial" target="_blank" rel="noopener noreferrer" data-i18n="botspage.financial.link">→ Talk to ExpertFinancial</a></p></div>
   </section>
+  <footer><span>&copy; 2025 Myndus</span><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><span class="footer-note" data-i18n="footer.note">Developed by AI under human supervision</span></footer>
+  <script src="js/theme.js"></script><script src="js/i18n.js"></script>
 </body>
 </html>

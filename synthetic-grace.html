@@ -1,155 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Synthetic Grace - Myndus</title>
-  
-  <!-- Theme Loader -->
-  <script>
-    (function() {
-      try {
-        const saved = localStorage.getItem("theme");
-        if (saved === "light") {
-          document.documentElement.classList.add("light-mode");
-        } else {
-          document.documentElement.classList.remove("light-mode");
-        }
-      } catch(e) { /* ignore */ }
-    })();
-  </script>
-  
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    section {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-    
-    /* CORREZIONI PER SPAZIO ECCESSIVO */
-    section.offworld-description {
-      padding: 40px 20px 20px !important;
-      min-height: unset !important;
-    }
-/* Disattiva lo scroll-snap solo in questa pagina */
-  html, body {
-    scroll-snap-type: none !important;
-  }
-  section {
-    scroll-snap-align: none !important;
-    min-height: auto !important;
-  }
-  </style>
+  <script>(function(){try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="uniform-bg">
-  <!-- =======================================
-       HEADER + NAVBAR (come neural-mirage)
-       ======================================= -->
+<body class="subpage">
   <header>
-    <h1 class="special-title">Synthetic Grace</h1>
+    <h1 class="page-title">Synthetic Grace</h1>
     <nav>
-      <div class="nav-links">
-        <a href="index.html#digitalart" class="nav-link">Home</a>
+      <div class="nav-links"><a href="index.html#digitalart" class="nav-link" data-i18n="nav.back-art">← Back to Art</a></div>
+      <div class="header-controls">
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">IT</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
       </div>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
     </nav>
   </header>
-
-  <!-- =======================================
-       DESCRIPTION SECTION
-       ======================================= -->
-  <section id="description" class="offworld-description">
-    <h1></h1>
-    <p><em>Explorations of digital beauty: ethereal figures, luminous forms, and the delicate balance between code and soul.</em></p>
+  <section class="section">
+    <div class="section-label" data-i18n="gallery.label">// Digital Art Collection</div>
+    <p class="section-description" data-i18n="synthetic.description"><em>Explorations of digital beauty.</em></p>
   </section>
-
-  <!-- =======================================
-       GALLERY SECTION
-       ======================================= -->
-  <section id="gallery" class="image-list">
-    <div class="image-item">
-      <img src="images/desert girl-1-640x480.jpg" alt="">
-      <div class="image-caption">
-       <strong>Solar Veil</strong> 
-       <p>She moves through the golden dunes like a 	sentient mirage. The sunset bends around her, 	weaving a veil of energy that drifts between 	matter and dream.</p>
-       <a href="images/desert girl-1-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
-
-    <div class="image-item">
-      <img src="images/desert girl-2-640x480.jpg" alt="">
-      <div class="image-caption">
-        <strong>Sand Oracle</strong> 
-       <p>Amid the waves of heat and sand, she stands 	still, listening to the desert. In her eyes, maps 	of distant worlds shimmer as if the wind itself 	whispered digital secrets to her.</p>
-       <a href="images/desert girl-1-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
-    
-    <div class="image-item">
-      <img src="images/desert girl-3-640x480.jpg" alt="Rusty Soul">
-      <div class="image-caption">
-        <strong>Mirage Bloom</strong> 
-        <p>Born of silence and light, she walks the line 	between the real and the artificial. Each step is 	a breath of color — an echo turning the desert 	into a garden of luminous waves.</p>
-        <a href="images/desert girl-3-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>  
-    
-    <div class="image-item">
-      <img src="images/girl-3-640x480.jpg" alt="Mechanical Heart">
-      <div class="image-caption">
-        <strong>Luminous Drift</strong> 
-        <p>Half-buried in sand, as if embraced by the 	desert itself, she drifts with the wind of light. 	Her form seems to fade into the horizon, where the 	earth meets the code of the sky.</p>
-        <a href="images/girl-3-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
-    
-    <div class="image-item">
-      <img src="images/girl-4-640x480.jpg" alt="Silent Orbit">
-      <div class="image-caption">
-        <strong>Drift of Light</strong> 
-        <p>Wrapped in dunes that move like silent tides, 	she surrenders to the flow of wind. The sand 	carries her toward an uncertain edge, where the 	sky unfolds into an endless web of light.</p>
-        <a href="images/girl-4-640x480.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>   
-    
-    <div class="image-item">
-      <img src="images/neon girl-1-800x600.jpg" alt="Fusion of Human and Machine">
-      <div class="image-caption">
-        <strong>Threshold Light</strong> 
-        <p>Before a gate of pure energy, she stands 	suspended between two worlds. Each step could 	shatter the balance between matter and mind, yet 	her eyes hold the spark of someone who still 	dreams.</p>
-        <a href="images/neon girl-1-800x600.jpg" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
-    <div class="image-item">
-      <img src="images/neon girl-3-800x600.jpg" alt="Fusion of Human and Machine">
-      <div class="image-caption">
-        <strong>Aurora Frame</strong> 
-        <p>Bathed in a pale glow, the light bends as she 	moves. She no longer belongs to the desert, but to 	a place where memories become pixels and emotions 	turn into living code.</p>
-        <a href="images/neon girl-3-800x600" download class="download-btn">⬇ Download Image</a>
-      </div>
-    </div>
+  <section class="image-list">
+    <div class="image-item"><img src="images/desert girl-1-640x480.jpg" alt="Solar Veil"><div class="image-caption"><strong data-i18n="synthetic.1.title">Solar Veil</strong><p data-i18n="synthetic.1.desc">She moves through the golden dunes.</p><a href="images/desert girl-1-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/desert girl-2-640x480.jpg" alt="Sand Oracle"><div class="image-caption"><strong data-i18n="synthetic.2.title">Sand Oracle</strong><p data-i18n="synthetic.2.desc">Amid the waves of heat and sand.</p><a href="images/desert girl-2-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/desert girl-3-640x480.jpg" alt="Mirage Bloom"><div class="image-caption"><strong data-i18n="synthetic.3.title">Mirage Bloom</strong><p data-i18n="synthetic.3.desc">Born of silence and light.</p><a href="images/desert girl-3-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/girl-3-640x480.jpg" alt="Luminous Drift"><div class="image-caption"><strong data-i18n="synthetic.4.title">Luminous Drift</strong><p data-i18n="synthetic.4.desc">Half-buried in sand.</p><a href="images/girl-3-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/girl-4-640x480.jpg" alt="Drift of Light"><div class="image-caption"><strong data-i18n="synthetic.5.title">Drift of Light</strong><p data-i18n="synthetic.5.desc">Wrapped in dunes.</p><a href="images/girl-4-640x480.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/neon girl-1-800x600.jpg" alt="Threshold Light"><div class="image-caption"><strong data-i18n="synthetic.6.title">Threshold Light</strong><p data-i18n="synthetic.6.desc">Before a gate of pure energy.</p><a href="images/neon girl-1-800x600.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
+    <div class="image-item"><img src="images/neon girl-3-800x600.jpg" alt="Aurora Frame"><div class="image-caption"><strong data-i18n="synthetic.7.title">Aurora Frame</strong><p data-i18n="synthetic.7.desc">Bathed in a pale glow.</p><a href="images/neon girl-3-800x600.jpg" download class="download-btn" data-i18n="gallery.download">⬇ Download</a></div></div>
   </section>
-
-  <!-- =======================================
-       NOTE SECTION
-       ======================================= -->
-  <section class="note-hd content-box">
-    <p><em>Note: The images shown here are preview versions. High-resolution files are available upon request or via our Ko-fi page.</em></p>
-    <p style="margin-top: 15px;">
-      🔗 <a href="https://ko-fi.com/myndus" target="_blank">Support the project on Ko-fi</a>
-    </p>
-  </section>
-
-  <!-- =======================================
-       FOOTER
-       ======================================= -->
-  <footer>
-    <p>&copy; 2025 Myndus | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    <p class="note">This text was generated with AI Aion under human supervision. It may contain errors; please verify important information.</p>
-  </footer>
-  <!-- =======================================
-       THEME SCRIPT
-       ======================================= -->
-  <script src="js/theme.js"></script>
+  <section class="note-hd content-box"><p data-i18n="gallery.note"><em>Note: Preview versions.</em></p><p style="margin-top:15px">🔗 <a href="https://ko-fi.com/myndus" target="_blank" data-i18n="gallery.kofi">Support the project on Ko-fi</a></p></section>
+  <footer><span>&copy; 2025 Myndus</span><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div><span class="footer-note" data-i18n="footer.note">Developed by AI under human supervision</span></footer>
+  <script src="js/theme.js"></script><script src="js/i18n.js"></script>
 </body>
 </html>
