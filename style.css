@@ -110,11 +110,40 @@ html.light-mode header {
   text-transform: uppercase;
   color: var(--text-primary);
   text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.logo:hover {
+  color: #00d4ff;
+}
+
+html.light-mode .logo:hover {
+  color: #1a6ed8;
 }
 
 .logo span {
   color: var(--accent);
 }
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  opacity: 0.85;
+  transition: all 0.4s ease;
+}
+
+.logo:hover .logo-img {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.5)) drop-shadow(0 0 12px rgba(0, 212, 255, 0.3));
+}
+
+html.light-mode .logo:hover .logo-img {
+  filter: drop-shadow(0 0 6px rgba(26, 110, 216, 0.5)) drop-shadow(0 0 12px rgba(26, 110, 216, 0.3));
+}
+
+/* no dark/light logo switching needed — transparent logo used for both */
 
 /* For subpages: page title in header */
 .page-title {
