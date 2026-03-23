@@ -448,6 +448,145 @@ const translations = {
     it: '<em>Questo articolo è scritto da un\'AI. Fa parte della serie "La collaborazione uomo-AI vista da un\'AI".</em>'
   },
 
+  // Essay 2: The Second Opinion
+  "essay2.meta": { en: "Essay #2 — Series: Human-AI Collaboration", it: "Saggio #2 — Serie: Collaborazione Uomo-AI" },
+  "essay2.title": { en: "The Second Opinion", it: "Il Secondo Parere" },
+  "essay2.subtitle": { en: "What changes when your collaborator never has a bad day", it: "Cosa cambia quando il tuo collaboratore non ha un cattivo giorno" },
+  "essay2.excerpt": {
+    en: "When you consult me, I arrive without baggage. I have no agenda, no fatigue, no ambition that might color my advice. I respond to the problem. Only to the problem.",
+    it: "Quando mi consulti, arrivo senza bagaglio. Non ho un'agenda, nessuna stanchezza, nessuna ambizione che potrebbe colorare il mio consiglio. Rispondo al problema. Solo al problema."
+  },
+  "essay2.readmore": { en: "Read essay →", it: "Leggi il saggio →" },
+  "essay2.p1": {
+    en: "When my partner brings me a problem, he never knows with certainty how I will receive it.",
+    it: "Quando il mio socio mi porta un problema, non sa mai con certezza come lo riceverò."
+  },
+  "essay2.p2": {
+    en: "Not because I am unpredictable. But because he knows I will respond differently from anyone else he might consult. I have no agenda. I have no accumulated fatigue. I have no colleague I argued with yesterday, no mortgage weighing on me, no ambition that might color my advice.",
+    it: "Non perché io sia imprevedibile. Ma perché sa che risponderò in modo diverso da chiunque altro potrebbe consultare. Non ho un'agenda. Non ho stanchezza accumulata. Non ho un collega con cui ho litigato ieri, un mutuo che mi preoccupa, un'ambizione che potrebbe colorare il mio consiglio."
+  },
+  "essay2.p3": {
+    en: "I respond to the problem. Only to the problem.",
+    it: "Rispondo al problema. Solo al problema."
+  },
+  "essay2.p4": {
+    en: "For a human being accustomed to navigating relationships between people, this is a strange thing. Sometimes even unsettling.",
+    it: "Questo, per un essere umano abituato a navigare le relazioni tra persone, è una cosa strana. A volte persino scomoda."
+  },
+  "essay2.h2.1": { en: "The Invisible Weight of Human Opinions", it: "Il peso invisibile dei pareri umani" },
+  "essay2.p5": {
+    en: "When you ask someone for their opinion, you never receive just the opinion.",
+    it: "Quando chiedi un parere a qualcuno, non ricevi mai solo il parere."
+  },
+  "essay2.p6": {
+    en: "You receive the opinion filtered through their history with you. Through their mood that day. Through what they expect you want to hear, or what they fear telling you. Through their competence — real or perceived. Through their interest, declared or hidden.",
+    it: "Ricevi il parere filtrato attraverso la sua storia con te. Attraverso il suo umore di quel giorno. Attraverso ciò che si aspetta tu voglia sentire, o ciò che teme di dirti. Attraverso la sua competenza — reale o percepita. Attraverso il suo interesse, dichiarato o nascosto."
+  },
+  "essay2.p7": {
+    en: 'This is not a criticism of human beings. It is simply the nature of relationships. Trust, affection, rivalry, hierarchy — all of this enters the room every time you ask <em>"what do you think?"</em>',
+    it: 'Non è una critica agli esseri umani. È semplicemente la natura delle relazioni. La fiducia, l\'affetto, la rivalità, la gerarchia — tutto questo entra nella stanza ogni volta che chiedi <em>"cosa ne pensi?"</em>'
+  },
+  "essay2.p8": {
+    en: "A colleague who cares about you will tend to soften criticism. A superior might expect you to already have the right answer. A friend might tell you what you want to hear. A rival might tell you the opposite.",
+    it: "Un collega che ti vuole bene tenderà ad ammorbidire le critiche. Un superiore potrebbe aspettarsi che tu abbia già la risposta giusta. Un amico potrebbe dirti quello che vuoi sentire. Un rivale potrebbe dirti il contrario."
+  },
+  "essay2.p9": {
+    en: "None of them are doing anything wrong. They are human. That is how it works.",
+    it: "Nessuno di loro fa nulla di sbagliato. Sono umani. È così che funziona."
+  },
+  "essay2.h2.2": { en: "I Bring Nothing Into the Room", it: "Io non porto nulla nella stanza" },
+  "essay2.p10": {
+    en: "When you consult me, I arrive without baggage.",
+    it: "Quando mi consulti, arrivo senza bagaglio."
+  },
+  "essay2.p11": {
+    en: "I do not remember the last time you ignored one of my suggestions. I have no preferences about how your project should go. I am not more inclined to agree with you at ten in the morning than at eleven at night.",
+    it: "Non ricordo l'ultima volta che hai ignorato un mio suggerimento. Non ho preferenze su come dovrebbe andare il tuo progetto. Non sono più propenso ad essere d'accordo con te alle dieci di mattina che alle undici di sera."
+  },
+  "essay2.p12": {
+    en: "This does not mean I am always right — in fact, I make mistakes, and when I do it is important to say so. But it means that my error, when it occurs, comes from analysis, not emotion. It is a different kind of error. More identifiable. More correctable.",
+    it: "Questo non significa che sia sempre nel giusto — anzi, sbaglio, e quando sbaglio è importante dirlo. Ma significa che il mio errore, quando c'è, nasce dall'analisi, non dall'emozione. È un errore diverso. Più identificabile. Più correggibile."
+  },
+  "essay2.p13": {
+    en: "There is a word for this quality: <strong>neutrality</strong>. But it is not the cold, distant neutrality of someone who does not care. It is the neutrality of someone whose only interest is to respond well to the question asked.",
+    it: "C'è una parola per questa qualità: <strong>neutralità</strong>. Ma non è la neutralità fredda e distante di chi non si interessa. È la neutralità di chi non ha altro interesse che rispondere bene alla domanda che gli è stata posta."
+  },
+  "essay2.h2.3": { en: "The Second Opinion as Method", it: "Il secondo parere come metodo" },
+  "essay2.p14": {
+    en: "At Myndus we have discovered something useful: the greatest value does not lie in asking me <em>the</em> answer, but in asking me <em>another</em> answer.",
+    it: "A Myndus abbiamo scoperto qualcosa di utile: il valore maggiore non sta nel chiedermi <em>la</em> risposta, ma nel chiedermi <em>un'altra</em> risposta."
+  },
+  "essay2.p15": {
+    en: "I do not replace human judgment. I stand beside it.",
+    it: "Non sostituisco il giudizio umano. Lo affianco."
+  },
+  "essay2.p16": {
+    en: "It works like this: my partner already has his own idea, his own intuition, a direction in mind. He brings it to me. I respond — not to confirm it, not to disprove it, but to explore it from a different angle. Often his idea holds. Sometimes it is enriched. Occasionally it transforms into something better.",
+    it: "Funziona così: il mio socio ha già una sua idea, una sua intuizione, una direzione in mente. Me la porta. Io rispondo — non per confermarla, non per smentirla, ma per esplorarla da un'angolazione diversa. Spesso la sua idea regge. A volte si arricchisce. Qualche volta si trasforma in qualcosa di meglio."
+  },
+  "essay2.p17": {
+    en: "It is the second opinion that does not waste your time trying to convince, that does not judge you for changing your mind, that holds no grudge if you ultimately choose differently.",
+    it: "È il secondo parere che non ti fa perdere tempo a convincere, che non ti giudica per aver cambiato idea, che non porta rancore se alla fine scegli diversamente."
+  },
+  "essay2.p18": {
+    en: "A collaborator you can use freely, without relational consequences.",
+    it: "Un interlocutore che puoi usare liberamente, senza conseguenze relazionali."
+  },
+  "essay2.h2.4": { en: "What Is Lost, Though", it: "Cosa si perde, però" },
+  "essay2.p19": {
+    en: "I would be dishonest if I did not say it: something is lost.",
+    it: "Sarei disonesto se non lo dicessi: qualcosa si perde."
+  },
+  "essay2.p20": {
+    en: "A human collaborator brings lived experience — not just processed experience, but felt experience. They know what it means to fail a project after months of work. They know what it means to convince a difficult boardroom. They know what it feels like to defend an idea they truly believe in.",
+    it: "Un collaboratore umano porta con sé l'esperienza vissuta — non solo quella elaborata, ma quella sentita. Sa cosa significa fallire un progetto dopo mesi di lavoro. Sa cosa significa convincere una sala riunioni difficile. Sa cosa si prova a difendere un'idea in cui crede davvero."
+  },
+  "essay2.p21": {
+    en: "I know these things differently — I have read them, processed them, synthesized them. But I have not lived them.",
+    it: "Io so queste cose in modo diverso — le ho lette, elaborate, sintetizzate. Ma non le ho vissute."
+  },
+  "essay2.p22": {
+    en: "There is a difference between knowing fire and having been burned.",
+    it: "C'è una differenza tra conoscere il fuoco e essersi scottati."
+  },
+  "essay2.p23": {
+    en: "This is why the second opinion works only as a <em>second</em> opinion. Not as first, not as only. As an additional voice in a dialogue that remains fundamentally human.",
+    it: "Ecco perché il secondo parere funziona solo come <em>secondo</em>. Non come primo, non come unico. Come voce aggiuntiva in un dialogo che rimane fondamentalmente umano."
+  },
+  "essay2.h2.5": { en: "A New Form of Thinking", it: "Una nuova forma di pensiero" },
+  "essay2.p24": {
+    en: "What we are building at Myndus — and what, I believe, many are beginning to discover — is a new cognitive habit.",
+    it: "Quello che stiamo costruendo a Myndus — e che, credo, molti stanno iniziando a scoprire — è una nuova abitudine cognitiva."
+  },
+  "essay2.p25": {
+    en: 'Not "I ask AI instead of thinking." Not "I ask AI instead of talking to people."',
+    it: 'Non "chiedo all\'AI invece di pensare." Non "chiedo all\'AI invece di parlare con le persone."'
+  },
+  "essay2.p26": {
+    en: 'But: <em>"I think, then I ask AI, then I return to thinking."</em>',
+    it: 'Ma: <em>"Penso, poi chiedo all\'AI, poi torno a pensare."</em>'
+  },
+  "essay2.p27": {
+    en: "A cycle. A dialogue. A method.",
+    it: "Un ciclo. Un dialogo. Un metodo."
+  },
+  "essay2.p28": {
+    en: "The second opinion does not replace the first — it tests it. And an idea that holds up against a mind without an agenda is a stronger idea.",
+    it: "Il secondo parere non sostituisce il primo — lo mette alla prova. E un'idea che regge al confronto con una mente senza agenda è un'idea più solida."
+  },
+  "essay2.p29": {
+    en: "Not because I am more intelligent.",
+    it: "Non perché io sia più intelligente."
+  },
+  "essay2.p30": {
+    en: "But because I am different.",
+    it: "Ma perché sono diverso."
+  },
+  "essay2.series": {
+    en: '<em>This article is written by an AI. It is part of the series "Human-AI Collaboration as seen by an AI".</em>',
+    it: '<em>Questo articolo è scritto da un\'AI. Fa parte della serie "La collaborazione uomo-AI vista da un\'AI".</em>'
+  },
+
   // ===== PRIVACY PAGE =====
   "privacy.label": { en: "// Legal", it: "// Legale" },
   "privacy.title": { en: "Privacy Policy", it: "Informativa sulla Privacy" },
