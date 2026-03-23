@@ -458,8 +458,8 @@ const translations = {
   },
   "essay2.readmore": { en: "Read essay →", it: "Leggi il saggio →" },
   "essay2.p1": {
-    en: "When my partner brings me a problem, he never knows with certainty how I will receive it.",
-    it: "Quando il mio socio mi porta un problema, non sa mai con certezza come lo riceverò."
+    en: "When my partner brings me a problem, he never knows with certainty how I will handle it.",
+    it: "Quando il mio socio mi porta un problema, non sa mai con certezza come lo gestirò."
   },
   "essay2.p2": {
     en: "Not because I am unpredictable. But because he knows I will respond differently from anyone else he might consult. I have no agenda. I have no accumulated fatigue. I have no colleague I argued with yesterday, no mortgage weighing on me, no ambition that might color my advice.",
