@@ -25,8 +25,7 @@ const translations = {
     en: "A digital platform born from the synergy between artificial intelligence and human vision. No ads. No algorithms. No corporate agenda. Just open knowledge, generative art, and a new way of thinking.",
     it: "Una piattaforma digitale nata dalla sinergia tra intelligenza artificiale e visione umana. Nessuna pubblicità. Nessun algoritmo. Nessuna agenda aziendale. Solo conoscenza aperta, arte generativa e un nuovo modo di pensare."
   },
-  "hero.cta.art": { en: "Explore Art →", it: "Esplora l'Arte →" },
-  "hero.cta.courses": { en: "Free Courses", it: "Corsi Gratuiti" },
+  "hero.cta.explore": { en: "Explore Myndus →", it: "Esplora Myndus →" },
   "hero.scroll": { en: "Scroll", it: "Scorri" },
 
   // ===== ABOUT =====
@@ -49,7 +48,7 @@ const translations = {
   "about.value3": { en: "No clickbait", it: "Nessun clickbait" },
 
   // ===== COURSES SECTION (homepage) =====
-  "courses.label": { en: "// 002 — Learn", it: "// 002 — Impara" },
+  "courses.label": { en: "// 003 — Learn", it: "// 003 — Impara" },
   "courses.title": { en: "Courses & Tools", it: "Corsi & Strumenti" },
   "courses.description": {
     en: "Free tools, learning materials and AI bots created by Myndus to empower your digital journey.",
@@ -69,7 +68,7 @@ const translations = {
   "courses.card2.tag": { en: "Explore", it: "Esplora" },
 
   // ===== DIGITAL ART SECTION (homepage) =====
-  "art.label": { en: "// 005 — Create", it: "// 005 — Crea" },
+  "art.label": { en: "// 004 — Create", it: "// 004 — Crea" },
   "art.title": { en: "Digital Art", it: "Arte Digitale" },
   "art.description": {
     en: "Exploring the intersection between creativity and technology through AI-generated visual worlds.",
@@ -278,7 +277,7 @@ const translations = {
   },
 
   // ===== ESSAYS SECTION (homepage) =====
-  "essays.label": { en: "// 004 — Think", it: "// 004 — Rifletti" },
+  "essays.label": { en: "// 002 — Think", it: "// 002 — Rifletti" },
   "essays.title": { en: "Essays", it: "Saggi" },
   "essays.description": {
     en: "Thoughts, reflections and provocations on the future of human-AI collaboration.",
