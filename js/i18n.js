@@ -272,8 +272,8 @@ const translations = {
   },
   "neural.6.title": { en: "Shattered Horizon", it: "Orizzonte Infranto" },
   "neural.6.desc": {
-    en: "A solitary tree rises against the burning edge of an eclipse, its branches reaching for the last breath of daylight—a silhouette suspended between ending and beginning.",
-    it: "Un albero solitario si staglia contro il bordo infuocato di un'eclissi, i suoi rami protesi verso l'ultimo respiro di luce — una silhouette sospesa tra fine e inizio."
+    en: "Constellations drift like living thoughts above the skyline, and he stands beneath them—small, yet infinite. Tonight, the sky is not a ceiling, but a message meant to be read.",
+    it: "Le costellazioni scorrono come pensieri vivi sopra la città, e lui resta sotto di esse—piccolo, eppure infinito. Stanotte il cielo non è un confine, ma un messaggio da interpretare."
   },
 
   // ===== ESSAYS SECTION (homepage) =====
