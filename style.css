@@ -282,6 +282,8 @@ nav {
   padding: 140px 60px 100px;
   position: relative;
   overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero::before {
@@ -459,6 +461,8 @@ html.light-mode .hero-title .highlight::after {
 .section {
   padding: 120px 60px;
   position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .section-label {
@@ -1131,9 +1135,11 @@ html[lang="it"] .essay-cover-it { display: block; }
 
 /* ===== DONATE SECTION ===== */
 .donate-section {
-  text-align: center;
+  text-align: left;
   padding: 80px 60px;
   border-top: 1px solid var(--border);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .donate-section p {
@@ -1141,13 +1147,15 @@ html[lang="it"] .essay-cover-it { display: block; }
   font-weight: 300;
   color: var(--text-secondary);
   max-width: 500px;
-  margin: 0 auto 24px;
   line-height: 1.7;
+  margin-bottom: 24px;
 }
 
 /* ===== CONTACT ===== */
 .contact-section {
   padding: 80px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-email {
@@ -1174,6 +1182,8 @@ body.subpage section {
   padding: 60px;
   opacity: 1;
   transform: none;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Back bar for legal pages */
