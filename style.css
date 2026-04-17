@@ -230,6 +230,19 @@ nav {
   gap: 8px;
 }
 
+/* Wrapper for controls + hamburger — always visible on mobile */
+.header-right {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    display: flex;
+  }
+}
+
 /* ===== LANGUAGE TOGGLE ===== */
 .lang-toggle {
   background: none;
@@ -1151,6 +1164,8 @@ html[lang="it"] .essay-cover-it { display: block; }
   border-top: 1px solid var(--border);
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .donate-section p {
@@ -1167,6 +1182,8 @@ html[lang="it"] .essay-cover-it { display: block; }
   padding: 80px 60px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-email {
@@ -1195,6 +1212,8 @@ body.subpage section {
   transform: none;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Back bar for legal pages */
@@ -1270,6 +1289,8 @@ footer {
   align-items: center;
   font-size: 0.75rem;
   color: var(--text-dim);
+  position: relative;
+  z-index: 1;
 }
 
 footer a {
@@ -1285,6 +1306,24 @@ footer a:hover {
 .footer-links {
   display: flex;
   gap: 24px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: var(--accent);
 }
 
 .footer-note {
@@ -1307,6 +1346,15 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+  .header-right {
+    display: flex;
+  }
+
+  /* Hide desktop controls inside nav on mobile */
+  nav .header-controls {
+    display: none;
+  }
+
   .mobile-menu-toggle { display: flex; }
 
   header { padding: 16px 24px; }

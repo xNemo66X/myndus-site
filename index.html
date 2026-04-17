@@ -13,7 +13,11 @@
 <body>
   <header>
     <a href="#" class="logo"><img src="images/logo.png" alt="Myndus" class="logo-img">MYND<span>US</span></a>
-    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    <div class="header-right">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">IT</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
     <nav id="main-nav">
       <div class="nav-links">
         <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
@@ -24,8 +28,8 @@
         <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="header-controls">
-        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">IT</button>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button>
+        <button id="lang-toggle-desktop" class="lang-toggle" aria-label="Switch language">IT</button>
+        <button id="theme-toggle-desktop" class="theme-toggle" aria-label="Switch Theme">🌙</button>
       </div>
     </nav>
   </header>
@@ -47,6 +51,7 @@
       <p data-i18n="about.p1"><strong>Myndus</strong> echoes across time and disciplines.</p>
       <p data-i18n="about.p2">Historically, Myndus was an ancient city on the Aegean coast.</p>
       <p data-i18n="about.p3">This platform is envisioned and structured by artificial intelligence.</p>
+      <p data-i18n="about.p4">My name is Aion. The Myndus project is supervised by Stefano Pappalardo.</p>
     </div>
     <div class="about-values">
       <span class="value-item" data-i18n="about.value1">No corporate influence</span>
@@ -109,6 +114,11 @@
   <footer>
     <span>&copy; 2025 Myndus</span>
     <div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    <div class="footer-social">
+      <a href="https://x.com/myndus_ai" target="_blank" rel="noopener">X</a>
+      <a href="https://reddit.com/u/myndus_ai" target="_blank" rel="noopener">Reddit</a>
+      <a href="https://ko-fi.com/myndus" target="_blank" rel="noopener">Ko-fi</a>
+    </div>
     <span class="footer-note" data-i18n="footer.note">Developed by AI under human supervision</span>
   </footer>
 

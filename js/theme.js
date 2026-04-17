@@ -1,33 +1,34 @@
 /* ============================================================
-   Myndus Theme System v3.0
-   Works across all pages
+   Myndus Theme System v4.0
+   Handles both mobile and desktop toggle buttons
    ============================================================ */
 (function () {
-  const root = document.documentElement;
-  const button = document.getElementById("theme-toggle");
+  var root = document.documentElement;
+  var buttons = document.querySelectorAll(".theme-toggle");
 
-  const savedTheme = localStorage.getItem("theme") || "dark";
+  var savedTheme = localStorage.getItem("theme") || "dark";
   if (savedTheme === "light") {
     root.classList.add("light-mode");
   } else {
     root.classList.remove("light-mode");
   }
 
-  const updateButtonIcon = () => {
-    if (!button) return;
-    button.textContent = root.classList.contains("light-mode") ? "☀️" : "🌙";
-    button.setAttribute("aria-label",
-      root.classList.contains("light-mode") ? "Switch to Dark Mode" : "Switch to Light Mode"
-    );
-  };
-
-  updateButtonIcon();
-
-  if (button) {
-    button.addEventListener("click", () => {
-      root.classList.toggle("light-mode");
-      localStorage.setItem("theme", root.classList.contains("light-mode") ? "light" : "dark");
-      updateButtonIcon();
+  function updateAllButtons() {
+    var icon = root.classList.contains("light-mode") ? "☀️" : "🌙";
+    var label = root.classList.contains("light-mode") ? "Switch to Dark Mode" : "Switch to Light Mode";
+    buttons.forEach(function(btn) {
+      btn.textContent = icon;
+      btn.setAttribute("aria-label", label);
     });
   }
+
+  updateAllButtons();
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      root.classList.toggle("light-mode");
+      localStorage.setItem("theme", root.classList.contains("light-mode") ? "light" : "dark");
+      updateAllButtons();
+    });
+  });
 })();
