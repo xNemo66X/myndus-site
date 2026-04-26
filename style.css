@@ -1125,6 +1125,14 @@ html[lang="it"] .essay-cover-it { display: block; }
   margin: 40px 0;
 }
 
+.essay-article .essay-source {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+
 .essay-article .essay-series {
   font-family: var(--font-mono);
   font-size: 0.7rem;
