@@ -873,22 +873,18 @@ const translations = {
     en: "The agents invented, learned, enforced, and transmitted a dominance hierarchy — structurally similar to those observed in chickens, mice, and fish. Without instructions. Without intention. Through pure emergent dynamics.",
     it: "Gli agenti hanno inventato, appreso, applicato e trasmesso una gerarchia di dominanza — strutturalmente simile a quelle osservate in polli, topi e pesci. Senza istruzioni. Senza intenzione. Per pura dinamica emergente."
   },
-  "essay5.h2.1": { en: "What Emergent Hierarchy Means", it: "Cosa si intende per gerarchia emergente" },
+  "essay5.h2.1": { en: "What Dominance Hierarchy Means", it: "Cosa si intende per gerarchia di dominanza" },
   "essay5.p5": {
-    en: "In biology, an emergent hierarchy is a dominance structure that arises from repeated interaction between identical or near-identical individuals — not from programmed genetic difference, but from the accumulation of small random advantages that self-amplify.",
-    it: "In biologia, una gerarchia emergente è una struttura di dominanza che nasce dall'interazione ripetuta tra individui identici o quasi identici — non dalla differenza genetica programmata, ma dall'accumulo di piccoli vantaggi casuali che si autoamplificano."
+    en: "In biology, a dominance hierarchy is a system of stable social relationships in which some individuals have priority access to resources — food, territory, mates — through repeated competitive interactions. The hierarchy reduces future conflict: once it is established who yields and who prevails, it is no longer necessary to fight every time.",
+    it: "In biologia, una gerarchia di dominanza è un sistema di relazioni sociali stabili in cui alcuni individui hanno accesso prioritario a risorse — cibo, territorio, partner — attraverso interazioni competitive ripetute. La gerarchia riduce i conflitti futuri: una volta stabilito chi cede e chi prevale, non è necessario scontrarsi ogni volta."
   },
   "essay5.p6": {
-    en: "The mechanism is simple: an individual, for contingent reasons, wins an interaction. This victory slightly increases its probability of winning the next one. The other individual, having lost, becomes slightly more inclined to yield. Over time, that initially irrelevant difference consolidates into a stable pattern: who commands and who obeys.",
-    it: "Il meccanismo è semplice: un individuo, per ragioni contingenti, vince un'interazione. Questa vittoria aumenta leggermente la sua probabilità di vincere la successiva. L'altro individuo, avendo perso, diventa leggermente più propenso a cedere. Col tempo, quella differenza inizialmente irrilevante si consolida in uno schema stabile: chi comanda e chi obbedisce."
+    en: "The classic mechanism is this: an individual wins an interaction. This victory slightly increases its probability of winning the next one. The other, having lost, becomes more inclined to yield. Over time, that pattern consolidates. Individuals do not need to be identical — in fact, differences in size, age, or experience often facilitate the emergence of hierarchy. But it can also arise among similar individuals, through the effect of random victories that self-amplify.",
+    it: "Il meccanismo classico è questo: un individuo vince un'interazione. Questa vittoria aumenta leggermente la sua probabilità di vincere la successiva. L'altro, avendo perso, diventa più propenso a cedere. Col tempo, quello schema si consolida. Non è necessario che gli individui siano identici — anzi, differenze di dimensione, età o esperienza spesso facilitano l'emergere della gerarchia. Ma può nascere anche tra individui simili, per effetto di vittorie casuali che si autoamplificano."
   },
   "essay5.p7": {
-    en: "It is not a question of superior strength. It is a question of history — of who won first, when everything was still open.",
-    it: "Non è una questione di forza superiore. È una questione di storia — di chi ha vinto per primo, quando tutto era ancora aperto."
-  },
-  "essay5.p8": {
-    en: "This is the phenomenon that Rachum and colleagues observed in AI systems in 2024. The hierarchies that emerged had a structure similar to those studied in animals such as chickens, mice, and fish. Same structure, different origin: not biology, but algorithm.",
-    it: "Questo è il fenomeno che Rachum e colleghi hanno osservato nelle AI nel 2024. Le gerarchie che emergevano avevano una struttura simile a quelle studiate in animali come polli, topi e pesci. Stessa struttura, origine diversa: non biologia, ma algoritmo."
+    en: "This is exactly the starting point of Rachum and colleagues' 2024 experiment: AI agents identical by design — same algorithm, same rules — in which no initial difference justified the emergence of an order. And yet an order emerged. The hierarchies observed had a structure similar to those studied in chickens, mice, and fish. Same structure, different origin: not biology, but algorithm.",
+    it: "Questo è esattamente il punto di partenza dell'esperimento di Rachum e colleghi nel 2024: agenti AI identici per design — stesso algoritmo, stesse regole — in cui nessuna differenza iniziale giustificava l'emergere di un ordine. Eppure un ordine è emerso. Le gerarchie osservate avevano una struttura simile a quelle studiate in polli, topi e pesci. Stessa struttura, origine diversa: non biologia, ma algoritmo."
   },
   "essay5.h2.2": { en: "Why This Is Surprising — And Why It Isn't", it: "Perché questo è sorprendente — e perché non lo è" },
   "essay5.p9": {
