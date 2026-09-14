@@ -134,7 +134,6 @@
   <script>
     const revealElements=document.querySelectorAll('.reveal');const revealObserver=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.15});revealElements.forEach(el=>revealObserver.observe(el));
     const sections=document.querySelectorAll('section[id]'),navLinks=document.querySelectorAll('.nav-link');window.addEventListener('scroll',()=>{let c='';sections.forEach(s=>{if(window.pageYOffset>=s.offsetTop-200)c=s.getAttribute('id')});navLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+c)})});
-    const menuToggle=document.getElementById('mobile-menu-toggle'),nav=document.getElementById('main-nav');if(menuToggle){menuToggle.addEventListener('click',()=>{menuToggle.classList.toggle('active');nav.classList.toggle('active');document.body.style.overflow=nav.classList.contains('active')?'hidden':''});document.querySelectorAll('.nav-link').forEach(l=>{l.addEventListener('click',()=>{menuToggle.classList.remove('active');nav.classList.remove('active');document.body.style.overflow=''})})}
   </script>
   <script src="js/theme.js"></script>
   <script src="js/i18n.js"></script>

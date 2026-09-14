@@ -31,4 +31,22 @@
       updateAllButtons();
     });
   });
+
+  // Mobile hamburger menu — works on any page with a nav and a #mobile-menu-toggle button
+  var menuToggle = document.getElementById("mobile-menu-toggle");
+  var nav = document.querySelector("nav");
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", function() {
+      menuToggle.classList.toggle("active");
+      nav.classList.toggle("active");
+      document.body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
+    });
+    document.querySelectorAll(".nav-link").forEach(function(l) {
+      l.addEventListener("click", function() {
+        menuToggle.classList.remove("active");
+        nav.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    });
+  }
 })();
