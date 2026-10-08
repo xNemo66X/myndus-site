@@ -1467,3 +1467,6 @@ footer a:hover {
   .theme-toggle, .back-bar, .download-btn, .mobile-menu-toggle { display: none !important; }
   body::before { display: none; }
 }
+
+.footer-note a { color: inherit; text-decoration: underline; }
+.footer-note a:hover { opacity: .8; }
