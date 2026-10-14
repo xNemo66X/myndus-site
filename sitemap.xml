@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://myndus.site/</loc><lastmod>2026-04-27</lastmod><priority>1.0</priority></url>
   <url><loc>https://myndus.site/essays.html</loc><lastmod>2026-04-27</lastmod><priority>0.9</priority></url>
-  <url><loc>https://myndus.site/articles/essay-50-first-prompts.html</loc><lastmod>2026-03-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-second-opinion.html</loc><lastmod>2026-03-23</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-whos-afraid-of-ai.html</loc><lastmod>2026-03-30</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-feature-or-mission.html</loc><lastmod>2026-04-13</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-whos-in-charge.html</loc><lastmod>2026-04-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-born-together.html</loc><lastmod>2026-05-11</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-artificial-crowd.html</loc><lastmod>2026-05-18</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-goblins.html</loc><lastmod>2026-06-04</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-building-together.html</loc><lastmod>2026-07-07</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-the-error.html</loc><lastmod>2026-07-29</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-the-translator.html</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-hal9000.html</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-watermark.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-ai-designed-viruses.html</loc><lastmod>2026-09-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-coxon-resignation.html</loc><lastmod>2026-09-16</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/essay-broken-fence.html</loc><lastmod>2026-09-29</lastmod><priority>0.8</priority></url>
-  <url><loc>https://myndus.site/articles/research-anthropic-fourth-incident.html</loc><lastmod>2026-10-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://myndus.site/articles/essay-50-first-prompts.html</loc><lastmod>2026-03-16</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-50-cover-en.png</image:loc></image:image><image:image><image:loc>https://myndus.site/articles/essay-50-cover-it.png</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-second-opinion.html</loc><lastmod>2026-03-23</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-second-opinion-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-whos-afraid-of-ai.html</loc><lastmod>2026-03-30</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-whos-afraid-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-feature-or-mission.html</loc><lastmod>2026-04-13</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-feature-or-mission-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-whos-in-charge.html</loc><lastmod>2026-04-27</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-whos-in-charge-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-born-together.html</loc><lastmod>2026-05-11</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-born-together-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-artificial-crowd.html</loc><lastmod>2026-05-18</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-artificial-crowd-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-goblins.html</loc><lastmod>2026-06-04</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-goblins-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-building-together.html</loc><lastmod>2026-07-07</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-building-together-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-the-error.html</loc><lastmod>2026-07-29</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-the-error-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-the-translator.html</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-the-translator-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-hal9000.html</loc><lastmod>2026-08-26</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-hal9000-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-watermark.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-watermark-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-ai-designed-viruses.html</loc><lastmod>2026-09-09</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-ai-designed-viruses-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-coxon-resignation.html</loc><lastmod>2026-09-16</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-coxon-resignation-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/essay-broken-fence.html</loc><lastmod>2026-09-29</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/essay-broken-fence-cover.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/articles/research-anthropic-fourth-incident.html</loc><lastmod>2026-10-07</lastmod><priority>0.8</priority><image:image><image:loc>https://myndus.site/articles/research-anthropic-fourth-incident-cover.jpg</image:loc></image:image></url>
   <url><loc>https://myndus.site/courses.html</loc><lastmod>2026-04-01</lastmod><priority>0.7</priority></url>
   <url><loc>https://myndus.site/bots.html</loc><lastmod>2026-04-01</lastmod><priority>0.7</priority></url>
-  <url><loc>https://myndus.site/offworld.html</loc><lastmod>2026-04-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://myndus.site/synthetic-grace.html</loc><lastmod>2026-04-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://myndus.site/neural-mirage.html</loc><lastmod>2026-04-01</lastmod><priority>0.6</priority></url>
+  <url><loc>https://myndus.site/offworld.html</loc><lastmod>2026-04-01</lastmod><priority>0.6</priority><image:image><image:loc>https://myndus.site/images/robot-1-800x600.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/robot-2-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/robot-3-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/robot-5-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/space-girl-2-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/space-girl-3-640x480.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/synthetic-grace.html</loc><lastmod>2026-04-01</lastmod><priority>0.6</priority><image:image><image:loc>https://myndus.site/images/desert-girl-1-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/desert-girl-2-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/desert-girl-3-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/girl-3-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/girl-4-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/neon-girl-1-800x600.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/neon-girl-3-800x600.jpg</image:loc></image:image></url>
+  <url><loc>https://myndus.site/neural-mirage.html</loc><lastmod>2026-04-01</lastmod><priority>0.6</priority><image:image><image:loc>https://myndus.site/images/astract_landscape-1-800x600.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/astract_landscape-3-800x600.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/fantastic_landscape-1-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/fantastic_landscape-2-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/fantastic_landscape-7-640x480.jpg</image:loc></image:image><image:image><image:loc>https://myndus.site/images/fantastic_landscape-9-640x480.jpg</image:loc></image:image></url>
   <url><loc>https://myndus.site/privacy.html</loc><lastmod>2026-04-01</lastmod><priority>0.3</priority></url>
   <url><loc>https://myndus.site/terms.html</loc><lastmod>2026-04-01</lastmod><priority>0.3</priority></url>
 </urlset>
