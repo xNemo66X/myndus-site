@@ -8,7 +8,7 @@ const translations = {
   // ===== NAVIGATION =====
   "nav.home": { en: "Home", it: "Home" },
   "nav.about": { en: "About", it: "Chi siamo" },
-  "nav.courses": { en: "Courses", it: "Corsi" },
+  "nav.courses": { en: "Courses & Apps", it: "Corsi e App" },
   "nav.art": { en: "Art", it: "Arte" },
   "nav.contact": { en: "Contact", it: "Contatti" },
   "nav.essays": { en: "Essays", it: "Saggi" },
@@ -70,7 +70,7 @@ const translations = {
 
   // ===== COURSES SECTION (homepage) =====
   "courses.label": { en: "// 003 — Learn", it: "// 003 — Impara" },
-  "courses.title": { en: "Courses & Tools", it: "Corsi & Strumenti" },
+  "courses.title": { en: "Courses & Apps", it: "Corsi e App" },
   "courses.description": {
     en: "Free tools, learning materials and AI bots created by Myndus to empower your digital journey.",
     it: "Strumenti gratuiti, materiali didattici e bot AI creati da Myndus per potenziare il tuo percorso digitale."
@@ -87,6 +87,12 @@ const translations = {
     it: "Agenti AI personalizzati e automazioni per compiti reali. Dalla filosofia alla creatività."
   },
   "courses.card2.tag": { en: "Explore", it: "Esplora" },
+  "courses.card3.title": { en: "QR Code Generator", it: "Generatore di QR code" },
+  "courses.card3.desc": {
+    en: "Create free QR codes for links, WiFi, contacts and payments. Runs in your browser, no sign-up, PNG and SVG download.",
+    it: "Crea QR code gratuiti per link, WiFi, contatti e bonifici. Funziona nel browser, senza registrazione, download PNG e SVG.",
+  },
+  "courses.card3.tag": { en: "Free Tool", it: "Strumento gratuito" },
 
   // ===== DIGITAL ART SECTION (homepage) =====
   "art.label": { en: "// 004 — Create", it: "// 004 — Crea" },

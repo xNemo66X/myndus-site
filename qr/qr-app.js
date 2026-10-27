@@ -1,0 +1,423 @@
+/* Generatore QR Myndus: logica della pagina. Tutto gira nel browser.
+   Dipende da qrcode.js (qrcode-generator di Kazuhiko Arase, licenza MIT). */
+(function () {
+  'use strict';
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  /* ---------- Traduzioni (l'italiano è già nell'HTML, indicizzabile) ---------- */
+  var EN = {
+    tool: 'QR code',
+    back: '← Back to Home',
+    fnote: 'Texts by Aion (AI), published under human editorial responsibility · <a href="../terms.html#editorial">Editorial transparency</a>',
+    h1: 'Free QR code generator',
+    lead: 'Create a QR code in seconds, pick colors and a logo, download PNG or SVG. No sign-up, no expiry: the code is yours and works forever.',
+    privacy: 'Everything happens in your browser: what you type is never sent to any server.',
+    h_content: '1. What to encode',
+    t_url: 'Link or text', t_wifi: 'WiFi', t_email: 'Email', t_tel: 'Phone', t_vcard: 'Contact (vCard)', t_sepa: 'SEPA transfer',
+    l_text: 'Link or text',
+    h_text: 'A full link (starting with https://) opens straight from the phone camera.',
+    l_ssid: 'Network name (SSID)', l_pass: 'Password', l_sec: 'Security', o_nopass: 'No password', l_hidden: 'Hidden network',
+    l_to: 'Email address', l_sub: 'Subject (optional)', l_body: 'Message (optional)',
+    l_num: 'Phone number', h_num: 'With the international prefix it also works abroad.',
+    l_first: 'First name', l_last: 'Last name', l_org: 'Company or role (optional)', l_site: 'Website (optional)',
+    l_benef: 'Beneficiary', l_amt: 'Amount in euro (optional)', l_reason: 'Payment reference (optional)',
+    h_sepa: 'EPC/Girocode format, read by European banking apps. Always check the details before paying.',
+    h_style: '2. Appearance',
+    l_fg: 'Code color', l_bg: 'Background color', l_size: 'PNG size', l_margin: 'Margin', l_ecc: 'Error correction',
+    h_ecc: 'More correction means a denser code that better survives scratches, dirt and a logo.',
+    l_logo: 'Center logo (optional)', l_logosize: 'Logo size', b_logoremove: 'Remove logo',
+    h_logo: 'With a logo, error correction is set to H automatically. Always test the code with a phone before printing it.',
+    h_preview: 'Preview', empty: 'Enter some content to see the QR code.',
+    b_png: 'Download PNG', b_svg: 'Download SVG', b_copy: 'Copy image', b_reset: 'Start over',
+    i_h2: 'Frequently asked questions',
+    q1: 'Does the QR code expire?',
+    a1: 'No. These are static QR codes: the content is written in the pattern itself, so they do not depend on a service that can shut down or ask for a subscription.',
+    q2: 'Why no sign-up?',
+    a2: 'The code is created by your browser. There are no accounts, no database, and the content never leaves your device.',
+    q3: 'PNG or SVG?',
+    a3: 'PNG is fine for screens, documents and social media. SVG is vector: choose it for flyers, stickers and large prints, because it stays sharp at any size.',
+    q4: 'How do I make sure it scans?',
+    a4: 'Use strong contrast between code and background (dark code on a light background), keep the margin around it and keep the logo small. Test it with several phones before printing.',
+    ph_text: 'https://www.example.com'
+  };
+
+  var MSG = {
+    it: {
+      tooLong: 'Il contenuto è troppo lungo per essere codificato con questa correzione errori. Accorcia il testo o scegli un livello più basso.',
+      iban: 'IBAN non valido: controlla i caratteri inseriti.',
+      benef: 'Inserisci il nome del beneficiario.',
+      amount: 'Importo non valido. Usa un formato come 25,00.',
+      mail: 'Inserisci un indirizzo e-mail valido.',
+      tel: 'Inserisci un numero di telefono.',
+      ssid: 'Inserisci il nome della rete.',
+      vcard: 'Inserisci almeno nome o cognome.',
+      noScheme: 'Manca https:// all\'inizio: alcuni telefoni lo leggeranno come semplice testo e non come link.',
+      lowContrast: 'Contrasto basso: il codice potrebbe non essere letto da tutti i telefoni.',
+      inverted: 'Il codice è più chiaro dello sfondo: alcuni lettori non lo riconoscono. Meglio codice scuro su sfondo chiaro.',
+      meta: function (v, n, px) { return 'Versione ' + v + ', ' + n + '×' + n + ' moduli, PNG ' + px + ' px'; },
+      copied: 'Immagine copiata negli appunti.',
+      copyFail: 'Questo browser non permette di copiare l\'immagine: usa Scarica PNG.',
+      logoFail: 'Impossibile leggere questo file come immagine.'
+    },
+    en: {
+      tooLong: 'The content is too long to encode with this error correction. Shorten the text or choose a lower level.',
+      iban: 'Invalid IBAN: check the characters you entered.',
+      benef: 'Enter the beneficiary name.',
+      amount: 'Invalid amount. Use a format like 25.00.',
+      mail: 'Enter a valid email address.',
+      tel: 'Enter a phone number.',
+      ssid: 'Enter the network name.',
+      vcard: 'Enter at least a first or last name.',
+      noScheme: 'The link has no https:// at the start: some phones will read it as plain text, not as a link.',
+      lowContrast: 'Low contrast: the code may not scan on every phone.',
+      inverted: 'The code is lighter than the background: some readers cannot recognise it. Dark code on a light background works best.',
+      meta: function (v, n, px) { return 'Version ' + v + ', ' + n + '×' + n + ' modules, PNG ' + px + ' px'; },
+      copied: 'Image copied to the clipboard.',
+      copyFail: 'This browser cannot copy the image: use Download PNG.',
+      logoFail: 'This file could not be read as an image.'
+    }
+  };
+
+  var lang = 'it';
+  function m() { return MSG[lang]; }
+
+  function applyLang(l) {
+    lang = l;
+    document.documentElement.lang = l;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-i18n]'), function (el) {
+      var html = el.hasAttribute('data-html');
+      if (el.dataset.it === undefined) el.dataset.it = html ? el.innerHTML : el.textContent;
+      var val = (l === 'en' && EN[el.dataset.i18n] !== undefined) ? EN[el.dataset.i18n] : el.dataset.it;
+      if (html) el.innerHTML = val; else el.textContent = val;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-i18n-ph]'), function (el) {
+      if (el.dataset.phIt === undefined) el.dataset.phIt = el.getAttribute('placeholder') || '';
+      el.setAttribute('placeholder', (l === 'en' && EN[el.dataset.i18nPh]) ? EN[el.dataset.i18nPh] : el.dataset.phIt);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.lang-toggle'), function (b) {
+      b.textContent = l === 'it' ? 'EN' : 'IT';
+    });
+    try { localStorage.setItem('lang', l); } catch (e) { /* ignorato */ }
+    update();
+  }
+
+  /* ---------- Costruzione del contenuto ---------- */
+  var type = 'url';
+
+  function val(id) { return $(id).value.trim(); }
+
+  function ibanValid(iban) {
+    if (!/^[A-Z]{2}\d{2}[A-Z0-9]{11,30}$/.test(iban)) return false;
+    var s = iban.slice(4) + iban.slice(0, 4), rem = 0, i, ch, code;
+    for (i = 0; i < s.length; i++) {
+      ch = s.charAt(i);
+      code = /[A-Z]/.test(ch) ? String(ch.charCodeAt(0) - 55) : ch;
+      for (var k = 0; k < code.length; k++) rem = (rem * 10 + Number(code.charAt(k))) % 97;
+    }
+    return rem === 1;
+  }
+
+  /* Ritorna { empty:true } | { error:'testo' } | { text:'...', warns:[...] } */
+  function buildContent() {
+    var t, warns = [];
+    switch (type) {
+      case 'url':
+        t = $('f_text').value.trim();
+        if (!t) return { empty: true };
+        if (/^[\w.-]+\.[a-z]{2,}(\/\S*)?$/i.test(t)) warns.push(m().noScheme);
+        return { text: t, warns: warns };
+
+      case 'wifi':
+        var ssid = val('w_ssid');
+        if (!ssid) return { empty: true };
+        var sec = $('w_sec').value;
+        var esc = function (s) { return s.replace(/([\\;,:"])/g, '\\$1'); };
+        var w = 'WIFI:T:' + sec + ';S:' + esc(ssid) + ';';
+        if (sec !== 'nopass') w += 'P:' + esc($('w_pass').value) + ';';
+        w += 'H:' + ($('w_hidden').checked ? 'true' : 'false') + ';;';
+        return { text: w, warns: warns };
+
+      case 'email':
+        var to = val('e_to');
+        if (!to) return { empty: true };
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) return { error: m().mail };
+        var q = [];
+        if (val('e_sub')) q.push('subject=' + encodeURIComponent(val('e_sub')));
+        if ($('e_body').value.trim()) q.push('body=' + encodeURIComponent($('e_body').value.trim()));
+        return { text: 'mailto:' + to + (q.length ? '?' + q.join('&') : ''), warns: warns };
+
+      case 'tel':
+        var num = val('p_num');
+        if (!num) return { empty: true };
+        var clean = num.replace(/[^\d+]/g, '');
+        if (clean.replace(/\+/g, '').length < 3) return { error: m().tel };
+        return { text: 'tel:' + clean, warns: warns };
+
+      case 'vcard':
+        var fn = val('v_first'), ln = val('v_last');
+        if (!fn && !ln && !val('v_org') && !val('v_tel') && !val('v_mail') && !val('v_url')) return { empty: true };
+        if (!fn && !ln) return { error: m().vcard };
+        var ve = function (s) { return s.replace(/([\\,;])/g, '\\$1').replace(/\n/g, '\\n'); };
+        var lines = ['BEGIN:VCARD', 'VERSION:3.0', 'N:' + ve(ln) + ';' + ve(fn) + ';;;', 'FN:' + ve((fn + ' ' + ln).trim())];
+        if (val('v_org')) lines.push('ORG:' + ve(val('v_org')));
+        if (val('v_tel')) lines.push('TEL:' + val('v_tel').replace(/[^\d+]/g, ''));
+        if (val('v_mail')) lines.push('EMAIL:' + val('v_mail'));
+        if (val('v_url')) lines.push('URL:' + val('v_url'));
+        lines.push('END:VCARD');
+        return { text: lines.join('\n'), warns: warns };
+
+      case 'sepa':
+        var name = val('s_name'), iban = val('s_iban').replace(/\s+/g, '').toUpperCase();
+        if (!name && !iban) return { empty: true };
+        if (!name) return { error: m().benef };
+        if (!ibanValid(iban)) return { error: m().iban };
+        var amt = val('s_amt').replace(',', '.'), amtLine = '';
+        if (amt) {
+          if (!/^\d+(\.\d{1,2})?$/.test(amt) || Number(amt) < 0.01 || Number(amt) > 999999999.99) return { error: m().amount };
+          amtLine = 'EUR' + Number(amt).toFixed(2);
+        }
+        var bic = val('s_bic').replace(/\s+/g, '').toUpperCase();
+        return { text: ['BCD', '002', '1', 'SCT', bic, name, iban, amtLine, '', '', val('s_reason'), ''].join('\n'), warns: warns };
+    }
+    return { empty: true };
+  }
+
+  /* ---------- Colori e contrasto ---------- */
+  function lum(hex) {
+    var c = [1, 3, 5].map(function (i) {
+      var v = parseInt(hex.substr(i, 2), 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+  function contrast(a, b) {
+    var l1 = lum(a), l2 = lum(b), hi = Math.max(l1, l2), lo = Math.min(l1, l2);
+    return (hi + 0.05) / (lo + 0.05);
+  }
+
+  /* ---------- Logo ---------- */
+  var logo = null; // { img, dataUrl }
+
+  function readLogo(file) {
+    var fr = new FileReader();
+    fr.onload = function () {
+      var img = new Image();
+      img.onload = function () {
+        logo = { img: img, dataUrl: fr.result, w: img.naturalWidth || 100, h: img.naturalHeight || 100 };
+        $('logoCtl').hidden = false;
+        update();
+      };
+      img.onerror = function () { clearLogo(); showMsg('err', m().logoFail); };
+      img.src = fr.result;
+    };
+    fr.readAsDataURL(file);
+  }
+  function clearLogo() {
+    logo = null;
+    $('o_logo').value = '';
+    $('logoCtl').hidden = true;
+    update();
+  }
+
+  /* ---------- Rendering ---------- */
+  var current = null; // { qr, fg, bg, margin, pct, px, cell }
+  var cv = $('cv'), ctx = cv.getContext('2d');
+
+  function makeQr(text, ecc) {
+    var qr = qrcode(0, ecc);
+    qr.addData(text, 'Byte');
+    qr.make();
+    return qr;
+  }
+
+  function logoBox(w, h, box) {
+    var s = Math.min(box / w, box / h);
+    return { w: w * s, h: h * s };
+  }
+
+  function drawCanvas(c) {
+    var n = c.qr.getModuleCount(), total = n + 2 * c.margin;
+    var cell = Math.max(1, Math.floor(c.size / total)), px = cell * total;
+    cv.width = px; cv.height = px;
+    ctx.fillStyle = c.bg; ctx.fillRect(0, 0, px, px);
+    ctx.fillStyle = c.fg;
+    for (var r = 0; r < n; r++) {
+      for (var k = 0; k < n; k++) {
+        if (c.qr.isDark(r, k)) ctx.fillRect((k + c.margin) * cell, (r + c.margin) * cell, cell, cell);
+      }
+    }
+    if (logo) {
+      var box = n * cell * c.pct / 100, d = logoBox(logo.w, logo.h, box), pad = cell;
+      var x = (px - d.w) / 2, y = (px - d.h) / 2;
+      ctx.fillStyle = c.bg;
+      ctx.fillRect(Math.round(x - pad), Math.round(y - pad), Math.round(d.w + 2 * pad), Math.round(d.h + 2 * pad));
+      ctx.drawImage(logo.img, x, y, d.w, d.h);
+    }
+    c.px = px; c.cell = cell;
+  }
+
+  function buildSvg(c) {
+    var n = c.qr.getModuleCount(), total = n + 2 * c.margin, d = '', r, k, s;
+    for (r = 0; r < n; r++) {
+      k = 0;
+      while (k < n) {
+        if (c.qr.isDark(r, k)) {
+          s = k;
+          while (k < n && c.qr.isDark(r, k)) k++;
+          d += 'M' + (s + c.margin) + ' ' + (r + c.margin) + 'h' + (k - s) + 'v1h-' + (k - s) + 'z';
+        } else { k++; }
+      }
+    }
+    var out = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 ' + total + ' ' + total +
+      '" width="1024" height="1024" shape-rendering="crispEdges">' +
+      '<rect width="' + total + '" height="' + total + '" fill="' + c.bg + '"/>' +
+      '<path fill="' + c.fg + '" d="' + d + '"/>';
+    if (logo) {
+      var box = n * c.pct / 100, dim = logoBox(logo.w, logo.h, box);
+      var x = (total - dim.w) / 2, y = (total - dim.h) / 2;
+      out += '<rect x="' + (x - 1) + '" y="' + (y - 1) + '" width="' + (dim.w + 2) + '" height="' + (dim.h + 2) + '" fill="' + c.bg + '"/>' +
+        '<image x="' + x + '" y="' + y + '" width="' + dim.w + '" height="' + dim.h + '" preserveAspectRatio="xMidYMid meet" href="' + logo.dataUrl + '" xlink:href="' + logo.dataUrl + '"/>';
+    }
+    return out + '</svg>';
+  }
+
+  /* ---------- Messaggi e stato dei pulsanti ---------- */
+  function showMsg(kind, text) {
+    var el = $(kind);
+    el.textContent = text || '';
+    el.hidden = !text;
+  }
+  function setButtons(on) {
+    ['dlPng', 'dlSvg', 'cpImg'].forEach(function (id) { $(id).disabled = !on; });
+  }
+  function showCanvas(on) {
+    cv.hidden = !on;
+    $('empty').hidden = on;
+  }
+
+  function update() {
+    showMsg('err', ''); showMsg('warn', '');
+    $('meta').textContent = '';
+    $('logoPct').textContent = $('o_logosize').value;
+
+    var res = buildContent();
+    if (res.empty) { current = null; showCanvas(false); setButtons(false); return; }
+    if (res.error) { current = null; showCanvas(false); setButtons(false); showMsg('err', res.error); return; }
+
+    var fg = $('o_fg').value, bg = $('o_bg').value;
+    var ecc = logo ? 'H' : $('o_ecc').value;
+    var qr;
+    try { qr = makeQr(res.text, ecc); }
+    catch (e) { current = null; showCanvas(false); setButtons(false); showMsg('err', m().tooLong); return; }
+
+    current = {
+      qr: qr, fg: fg, bg: bg,
+      margin: parseInt($('o_margin').value, 10),
+      size: parseInt($('o_size').value, 10),
+      pct: parseInt($('o_logosize').value, 10)
+    };
+    drawCanvas(current);
+    showCanvas(true);
+    setButtons(true);
+
+    var warns = res.warns.slice();
+    if (lum(fg) > lum(bg)) warns.push(m().inverted);
+    else if (contrast(fg, bg) < 3) warns.push(m().lowContrast);
+    if (warns.length) showMsg('warn', warns.join(' '));
+
+    var n = qr.getModuleCount();
+    $('meta').textContent = m().meta((n - 17) / 4, n, current.px);
+  }
+
+  /* ---------- Azioni ---------- */
+  function download(blob, name) {
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+  }
+
+  $('dlPng').addEventListener('click', function () {
+    if (!current) return;
+    cv.toBlob(function (b) { if (b) download(b, 'qr-code.png'); }, 'image/png');
+  });
+  $('dlSvg').addEventListener('click', function () {
+    if (!current) return;
+    download(new Blob([buildSvg(current)], { type: 'image/svg+xml' }), 'qr-code.svg');
+  });
+  $('cpImg').addEventListener('click', function () {
+    if (!current) return;
+    if (!(navigator.clipboard && window.ClipboardItem)) { showMsg('warn', m().copyFail); return; }
+    cv.toBlob(function (b) {
+      navigator.clipboard.write([new ClipboardItem({ 'image/png': b })]).then(
+        function () { $('meta').textContent = m().copied; },
+        function () { showMsg('warn', m().copyFail); }
+      );
+    }, 'image/png');
+  });
+
+  $('reset').addEventListener('click', function () {
+    Array.prototype.forEach.call(document.querySelectorAll('.card input, .card textarea, .card select'), function (el) {
+      if (el.type === 'checkbox') el.checked = el.defaultChecked;
+      else if (el.type === 'file') el.value = '';
+      else if (el.tagName === 'SELECT') {
+        var idx = 0;
+        Array.prototype.forEach.call(el.options, function (o, i) { if (o.defaultSelected) idx = i; });
+        el.selectedIndex = idx;
+      } else el.value = el.defaultValue;
+    });
+    logo = null; $('logoCtl').hidden = true;
+    setType('url');
+  });
+
+  /* ---------- Schede ---------- */
+  function setType(t) {
+    type = t;
+    Array.prototype.forEach.call(document.querySelectorAll('#tabs button'), function (b) {
+      b.setAttribute('aria-selected', b.dataset.type === t ? 'true' : 'false');
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-panel]'), function (p) {
+      p.hidden = p.dataset.panel !== t;
+    });
+    update();
+  }
+  $('tabs').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-type]');
+    if (b) setType(b.dataset.type);
+  });
+
+  /* ---------- Ingressi ---------- */
+  var timer = null;
+  function schedule() { clearTimeout(timer); timer = setTimeout(update, 120); }
+  Array.prototype.forEach.call(document.querySelectorAll('.card input, .card textarea, .card select'), function (el) {
+    if (el.type === 'file') return;
+    el.addEventListener('input', schedule);
+    el.addEventListener('change', schedule);
+  });
+  $('o_logo').addEventListener('change', function () {
+    var f = this.files && this.files[0];
+    if (f) readLogo(f);
+  });
+  $('logoRemove').addEventListener('click', clearLogo);
+
+  Array.prototype.forEach.call(document.querySelectorAll('.lang-toggle'), function (b) {
+    b.addEventListener('click', function () { applyLang(lang === 'it' ? 'en' : 'it'); });
+  });
+
+  /* ---------- Avvio ---------- */
+  var start = 'it';
+  try {
+    var saved = localStorage.getItem('lang');
+    if (saved === 'it' || saved === 'en') start = saved;
+    else if ((navigator.language || '').toLowerCase().indexOf('it') !== 0) start = 'en';
+  } catch (e) { /* ignorato */ }
+  if (start === 'en') applyLang('en'); else update();
+
+  // Hook per i test automatici
+  window.__qr = { get current() { return current; }, svg: function () { return current ? buildSvg(current) : null; } };
+})();

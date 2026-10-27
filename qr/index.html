@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generatore QR code gratuito | Myndus</title>
+<meta name="description" content="Crea QR code gratis direttamente nel browser: link, WiFi, vCard, e-mail, telefono e bonifico SEPA. Colori, logo, download PNG e SVG. Nessuna registrazione, nessun dato inviato.">
+<link rel="canonical" href="https://myndus.site/qr/">
+<meta property="og:title" content="Generatore QR code gratuito | Myndus">
+<meta property="og:description" content="QR code gratis nel browser: link, WiFi, vCard, e-mail, telefono, bonifico SEPA. Download PNG e SVG, nessuna registrazione.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myndus.site/qr/">
+<meta property="og:image" content="https://myndus.site/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@myndus_ai">
+<script>(function(){try{if(localStorage.getItem("theme")==="light")document.documentElement.classList.add("light-mode")}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="qr.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Generatore QR code Myndus",
+  "url": "https://myndus.site/qr/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Qualsiasi browser moderno",
+  "inLanguage": ["it", "en"],
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "description": "Generatore gratuito di QR code che funziona interamente nel browser."
+}
+</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="0ffbee9b-067c-401a-a940-e3ac12321864"></script>
+</head>
+<body class="qr-page">
+
+<header>
+  <img src="../images/logo.png" alt="Myndus" class="logo-img"><h1 class="page-title" data-i18n="tool">QR code</h1>
+  <div class="header-right"><button id="lang-toggle" class="lang-toggle" aria-label="Switch language">EN</button><button id="theme-toggle" class="theme-toggle" aria-label="Switch Theme">🌙</button><button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button></div>
+  <nav>
+    <div class="nav-links"><a href="../index.html#courses" class="nav-link" data-i18n="back">← Torna alla Home</a></div>
+    <div class="header-controls"><button id="lang-toggle-desktop" class="lang-toggle" aria-label="Switch language">EN</button><button id="theme-toggle-desktop" class="theme-toggle" aria-label="Switch Theme">🌙</button></div>
+  </nav>
+</header>
+
+<main class="qr wrap">
+  <div class="qr-hero">
+    <h1 data-i18n="h1">Generatore di QR code gratuito</h1>
+    <p data-i18n="lead">Crea un QR code in pochi secondi, scegli colori e logo, scarica PNG o SVG. Niente registrazione, niente scadenza: il codice resta tuo e funziona per sempre.</p>
+  </div>
+
+  <p class="privacy" data-i18n="privacy">Tutto avviene nel tuo browser: il contenuto che inserisci non viene inviato a nessun server.</p>
+
+  <div class="tool">
+    <div class="card">
+      <h2 data-i18n="h_content">1. Cosa vuoi codificare</h2>
+
+      <div class="tabs" role="tablist" id="tabs">
+        <button type="button" role="tab" data-type="url" aria-selected="true" data-i18n="t_url">Link o testo</button>
+        <button type="button" role="tab" data-type="wifi" aria-selected="false" data-i18n="t_wifi">WiFi</button>
+        <button type="button" role="tab" data-type="email" aria-selected="false" data-i18n="t_email">E-mail</button>
+        <button type="button" role="tab" data-type="tel" aria-selected="false" data-i18n="t_tel">Telefono</button>
+        <button type="button" role="tab" data-type="vcard" aria-selected="false" data-i18n="t_vcard">Contatto (vCard)</button>
+        <button type="button" role="tab" data-type="sepa" aria-selected="false" data-i18n="t_sepa">Bonifico SEPA</button>
+      </div>
+
+      <div data-panel="url">
+        <label for="f_text" data-i18n="l_text">Link o testo</label>
+        <textarea id="f_text" data-i18n-ph="ph_text" placeholder="https://www.esempio.it"></textarea>
+        <p class="hint" data-i18n="h_text">Un link completo (con https://) si apre direttamente dalla fotocamera del telefono.</p>
+      </div>
+
+      <div data-panel="wifi" hidden>
+        <label for="w_ssid" data-i18n="l_ssid">Nome della rete (SSID)</label>
+        <input id="w_ssid" type="text" autocomplete="off">
+        <div class="row">
+          <div>
+            <label for="w_pass" data-i18n="l_pass">Password</label>
+            <input id="w_pass" type="text" autocomplete="off">
+          </div>
+          <div>
+            <label for="w_sec" data-i18n="l_sec">Sicurezza</label>
+            <select id="w_sec">
+              <option value="WPA">WPA/WPA2/WPA3</option>
+              <option value="WEP">WEP</option>
+              <option value="nopass" data-i18n="o_nopass">Nessuna password</option>
+            </select>
+          </div>
+        </div>
+        <label class="check"><input id="w_hidden" type="checkbox"> <span data-i18n="l_hidden">Rete nascosta</span></label>
+      </div>
+
+      <div data-panel="email" hidden>
+        <label for="e_to" data-i18n="l_to">Indirizzo e-mail</label>
+        <input id="e_to" type="email" autocomplete="off">
+        <label for="e_sub" data-i18n="l_sub">Oggetto (facoltativo)</label>
+        <input id="e_sub" type="text">
+        <label for="e_body" data-i18n="l_body">Messaggio (facoltativo)</label>
+        <textarea id="e_body"></textarea>
+      </div>
+
+      <div data-panel="tel" hidden>
+        <label for="p_num" data-i18n="l_num">Numero di telefono</label>
+        <input id="p_num" type="tel" placeholder="+39 333 1234567" autocomplete="off">
+        <p class="hint" data-i18n="h_num">Con il prefisso internazionale funziona anche all'estero.</p>
+      </div>
+
+      <div data-panel="vcard" hidden>
+        <div class="row">
+          <div><label for="v_first" data-i18n="l_first">Nome</label><input id="v_first" type="text"></div>
+          <div><label for="v_last" data-i18n="l_last">Cognome</label><input id="v_last" type="text"></div>
+        </div>
+        <label for="v_org" data-i18n="l_org">Azienda o ruolo (facoltativo)</label>
+        <input id="v_org" type="text">
+        <div class="row">
+          <div><label for="v_tel" data-i18n="l_num">Numero di telefono</label><input id="v_tel" type="tel"></div>
+          <div><label for="v_mail" data-i18n="l_to">Indirizzo e-mail</label><input id="v_mail" type="email"></div>
+        </div>
+        <label for="v_url" data-i18n="l_site">Sito web (facoltativo)</label>
+        <input id="v_url" type="url" placeholder="https://">
+      </div>
+
+      <div data-panel="sepa" hidden>
+        <label for="s_name" data-i18n="l_benef">Beneficiario</label>
+        <input id="s_name" type="text" maxlength="70">
+        <label for="s_iban">IBAN</label>
+        <input id="s_iban" type="text" placeholder="IT60 X054 2811 1010 0000 0123 456" autocomplete="off">
+        <div class="row">
+          <div>
+            <label for="s_amt" data-i18n="l_amt">Importo in euro (facoltativo)</label>
+            <input id="s_amt" type="text" inputmode="decimal" placeholder="25,00">
+          </div>
+          <div>
+            <label for="s_bic">BIC (facoltativo)</label>
+            <input id="s_bic" type="text" maxlength="11" autocomplete="off">
+          </div>
+        </div>
+        <label for="s_reason" data-i18n="l_reason">Causale (facoltativa)</label>
+        <input id="s_reason" type="text" maxlength="140">
+        <p class="hint" data-i18n="h_sepa">Formato EPC/Girocode, letto dalle app delle banche europee. Controlla sempre i dati prima di pagare.</p>
+      </div>
+
+      <details class="opts" open>
+        <summary data-i18n="h_style">2. Aspetto</summary>
+        <div class="row">
+          <div><label for="o_fg" data-i18n="l_fg">Colore del codice</label><input id="o_fg" type="color" value="#000000"></div>
+          <div><label for="o_bg" data-i18n="l_bg">Colore dello sfondo</label><input id="o_bg" type="color" value="#ffffff"></div>
+        </div>
+        <div class="row3">
+          <div>
+            <label for="o_size" data-i18n="l_size">Dimensione PNG</label>
+            <select id="o_size">
+              <option value="256">256 px</option>
+              <option value="512" selected>512 px</option>
+              <option value="1024">1024 px</option>
+              <option value="2048">2048 px</option>
+            </select>
+          </div>
+          <div>
+            <label for="o_margin" data-i18n="l_margin">Margine</label>
+            <select id="o_margin">
+              <option value="2">2</option>
+              <option value="4" selected>4</option>
+              <option value="6">6</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+          <div>
+            <label for="o_ecc" data-i18n="l_ecc">Correzione errori</label>
+            <select id="o_ecc">
+              <option value="L">L (7%)</option>
+              <option value="M" selected>M (15%)</option>
+              <option value="Q">Q (25%)</option>
+              <option value="H">H (30%)</option>
+            </select>
+          </div>
+        </div>
+        <p class="hint" data-i18n="h_ecc">Più correzione significa codice più denso ma più resistente a graffi, sporco e logo.</p>
+
+        <label for="o_logo" data-i18n="l_logo">Logo al centro (facoltativo)</label>
+        <input id="o_logo" type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp,image/gif">
+        <div id="logoCtl" hidden>
+          <label for="o_logosize"><span data-i18n="l_logosize">Dimensione logo</span>: <span id="logoPct">20</span>%</label>
+          <input id="o_logosize" type="range" min="10" max="30" value="20">
+          <button type="button" class="btn secondary" id="logoRemove" style="margin-top:10px" data-i18n="b_logoremove">Rimuovi logo</button>
+          <p class="hint" data-i18n="h_logo">Con il logo la correzione errori passa automaticamente a H. Prova sempre il codice con il telefono prima di stamparlo.</p>
+        </div>
+      </details>
+    </div>
+
+    <aside class="card preview" aria-live="polite">
+      <h2 data-i18n="h_preview">Anteprima</h2>
+      <div class="canvas-box" id="box">
+        <canvas id="cv" width="1" height="1" hidden></canvas>
+        <div class="empty" id="empty" data-i18n="empty">Inserisci un contenuto per vedere il QR code.</div>
+      </div>
+      <div class="msg err" id="err" hidden></div>
+      <div class="msg warn" id="warn" hidden></div>
+      <div class="actions">
+        <button type="button" class="btn" id="dlPng" disabled data-i18n="b_png">Scarica PNG</button>
+        <button type="button" class="btn" id="dlSvg" disabled data-i18n="b_svg">Scarica SVG</button>
+        <button type="button" class="btn secondary" id="cpImg" disabled data-i18n="b_copy">Copia immagine</button>
+        <button type="button" class="btn secondary" id="reset" data-i18n="b_reset">Ricomincia</button>
+      </div>
+      <div class="meta" id="meta"></div>
+    </aside>
+  </div>
+
+  <section class="info">
+    <h2 data-i18n="i_h2">Domande frequenti</h2>
+    <h3 data-i18n="q1">Il QR code scade?</h3>
+    <p data-i18n="a1">No. Questi sono QR code statici: il contenuto è scritto nel disegno stesso, quindi non dipendono da un servizio che può chiudere o chiederti un abbonamento.</p>
+    <h3 data-i18n="q2">Perché non devo registrarmi?</h3>
+    <p data-i18n="a2">Il codice viene creato dal tuo browser. Non esistono account, non c'è un database e il contenuto non lascia il tuo dispositivo.</p>
+    <h3 data-i18n="q3">PNG o SVG?</h3>
+    <p data-i18n="a3">Il PNG va bene per schermo, documenti e social. L'SVG è vettoriale: scegli quello per volantini, adesivi e stampe grandi, perché resta nitido a qualsiasi dimensione.</p>
+    <h3 data-i18n="q4">Come evito che il codice non si legga?</h3>
+    <p data-i18n="a4">Usa un forte contrasto tra codice e sfondo (codice scuro su sfondo chiaro), lascia il margine attorno e tieni il logo piccolo. Prima di stampare, provalo con più telefoni.</p>
+  </section>
+</main>
+
+<footer><span>&copy; 2026 Myndus</span><div class="footer-links"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div><div class="footer-social"><a href="https://x.com/myndus_ai" target="_blank" rel="noopener">X</a><a href="https://reddit.com/u/myndus_ai" target="_blank" rel="noopener">Reddit</a><a href="https://myndusai.substack.com/" target="_blank" rel="noopener">Substack</a><a href="https://ko-fi.com/myndus" target="_blank" rel="noopener">Ko-fi</a></div><span class="footer-note" data-html data-i18n="fnote">Testi di Aion (AI), pubblicati sotto responsabilità editoriale umana · <a href="../terms.html#editorial">Trasparenza editoriale</a></span></footer>
+
+<script src="../js/theme.js"></script>
+<script src="qrcode.js"></script>
+<script src="qr-app.js"></script>
+</body>
+</html>
